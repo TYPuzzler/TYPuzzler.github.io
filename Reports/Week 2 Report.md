@@ -1,19 +1,19 @@
 # Team Report
-## Last Weeks Plans / Goals
+## 1. Last Weeks Plans / Goals
 Empty for week 1
-## What We Did  
+## 2. What We Did  
 - Redefined project proposal and goals  
 - Wrote requirements document  
 - Setting up git repo  
-## Plans / Goals  
+## 3. Plans / Goals  
 - Finish setting up Git repo  
 - Start investigating our technology stack  
 - Create small prototypes and foundational code for the web app  
 
 # Contributions  
-## Last Weeks Plans / Goals
+## 1. Last Weeks Plans / Goals
 Empty for week 1
-## What We Did  
+## 2. What We Did  
 ### Margaret  
 - Documentation for requirements document  
 ### Chris  
@@ -22,7 +22,7 @@ Empty for week 1
 - Documentation for requirements document  
 ### Eric  
 - Documentation for requirements document  
-## Plans / Goals  
+## 3. Plans / Goals  
 ### Margaret  
 - Start setting up a basic web application frontend  
 ### Chris  
