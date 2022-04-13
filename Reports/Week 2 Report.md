@@ -1,33 +1,33 @@
-Team Report  
+# Team Report
 Empty for week 1  
-What We Did  
+## What We Did  
 Redefined project proposal and goals  
 Wrote requirements document  
 Setting up git repo  
-Plans / Goals  
+## Plans / Goals  
 Finish setting up Git repo  
 Start investigating our technology stack  
 Create small prototypes and foundational code for the web app  
 
-Contributions  
+# Contributions  
 Empty for week 1  
-What We Did  
-Margaret  
+## What We Did  
+### Margaret  
 Documentation for requirements document  
-Chris  
+### Chris  
 Documentation for requirements document  
-Bowen  
+### Bowen  
 Documentation for requirements document  
-Eric  
+### Eric  
 Documentation for requirements document  
-Plans / Goals  
-Margaret  
+## Plans / Goals  
+### Margaret  
 Start setting up a basic web application frontend  
-Chris  
+### Chris  
 Start setting up the random text sample generation  
-Bowen  
+### Bowen  
 Setting up GitHub Repo and start working/experimenting on different ways of cutting images into pieces  
-Eric  
+### Eric  
 Start setting up a basic web application frontend  
 
 
