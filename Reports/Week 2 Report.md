@@ -1,4 +1,6 @@
 # Team Report
+## Last Weeks Plans / Goals
+Empty for week 1
 ## What We Did  
 - Redefined project proposal and goals  
 - Wrote requirements document  
@@ -9,6 +11,8 @@
 - Create small prototypes and foundational code for the web app  
 
 # Contributions  
+## Last Weeks Plans / Goals
+Empty for week 1
 ## What We Did  
 ### Margaret  
 - Documentation for requirements document  
