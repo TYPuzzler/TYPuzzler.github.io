@@ -5,6 +5,7 @@
 - Create small prototypes and foundational code for the web app  
 ## 2. What We Did  
 ## 3. Plans / Goals  
+## Agenda
 # Contributions  
 ## 1. Last Weeks Plans / Goals
 ### Margaret  
