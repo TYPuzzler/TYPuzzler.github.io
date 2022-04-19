@@ -27,3 +27,6 @@ Contains the public webpage files
 
 ## \~/images
 Contains all the puzzle images
+
+## \~/typuzzler
+Contains code related to the front end website
