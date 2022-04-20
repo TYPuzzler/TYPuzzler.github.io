@@ -14,7 +14,7 @@ class PuzzlePiece:
         self.src = imgSource
         self.name = name
         self.num = num
-        
+
     # Shows this piece in a new window
     def show(self):
         Image.open(self.src).crop(self.coords).show()
@@ -30,4 +30,3 @@ class PuzzlePiece:
                 path += self.src[:index+1]
         path += 'puzzle_' + self.name + '_piece_' + str(self.num) + '.png'
         Image.open(self.src).crop(self.coords).save(path)
-        
