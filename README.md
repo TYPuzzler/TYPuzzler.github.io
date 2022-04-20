@@ -20,7 +20,7 @@ Our goals are to:
 
 
 ## \~/src
-Contains the code files of the application
+Contains the code related to the backend puzzle processing mechanism
 
 ## \~/public
 Contains the public webpage files
