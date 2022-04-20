@@ -17,4 +17,10 @@
 ### Eric  
 - Start setting up a basic web application frontend 
 ## 2. What We Did  
+### Bowen
+- Set up GitHub Repo with teammates
+- Implemented puzzle generating mechanism(`puzzleCreator.py`, `puzzlePiece.py`, `util.py`)
 ## 3. Plans / Goals  
+### Bowen
+- Find a way to assign different chances to each of the puzzle pieces for the rewarding system
+- Maybe find a way to make the puzzle pieces more like actual puzzle pieces instead of squares
