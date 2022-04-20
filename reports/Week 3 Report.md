@@ -1,5 +1,5 @@
 # Team Report
-## 1. Last Weeks Plans / Goals
+## 1. Last Week's Plans / Goals
 - Finish setting up Git repo  
 - Start investigating our technology stack  
 - Create small prototypes and foundational code for the web app  
@@ -7,7 +7,7 @@
 ## 3. Plans / Goals  
 ## Agenda
 # Contributions  
-## 1. Last Weeks Plans / Goals
+## 1. Last Week's Plans / Goals
 ### Margaret  
 - Start setting up a basic web application frontend  
 ### Chris  

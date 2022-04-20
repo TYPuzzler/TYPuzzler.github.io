@@ -1,5 +1,5 @@
 # Team Report
-## 1. Last Weeks Plans / Goals
+## 1. Last Week's Plans / Goals
 Empty for week 1
 ## 2. What We Did  
 - Redefined project proposal and goals  
@@ -11,7 +11,7 @@ Empty for week 1
 - Create small prototypes and foundational code for the web app  
 
 # Contributions  
-## 1. Last Weeks Plans / Goals
+## 1. Last Week's Plans / Goals
 Empty for week 1
 ## 2. What We Did  
 ### Margaret  
