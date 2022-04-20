@@ -4,6 +4,10 @@
 - Start investigating our technology stack  
 - Create small prototypes and foundational code for the web app  
 ## 2. What We Did  
+- Finalized Git repo set up
+- Implemented puzzle generating mechanics
+- Random text generation
+- Basic frontend pages
 ## 3. Plans / Goals  
 ## Agenda
 # Contributions  
@@ -15,7 +19,8 @@
 ### Bowen  
 - Setting up GitHub Repo and start working/experimenting on different ways of cutting images into pieces  
 ### Eric  
-- Start setting up a basic web application frontend 
+- Started on basic react app frontend
+- Front is set up to start on next week typing UI
 ## 2. What We Did  
 ### Bowen
 - Set up GitHub Repo with teammates
