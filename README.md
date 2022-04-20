@@ -30,6 +30,3 @@ Contains all the puzzle images
 
 ## \~/typuzzler
 Contains code related to the front end website
-
-## \~/reports
-Contains weekly status reports of progress made on the project as well as plans for next steps
