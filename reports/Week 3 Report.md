@@ -17,4 +17,6 @@
 ### Eric  
 - Start setting up a basic web application frontend 
 ## 2. What We Did  
+### Bowen
+- Set GitHub Repo with teammates and implemented puzzle generating mechanism
 ## 3. Plans / Goals  
