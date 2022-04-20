@@ -1,13 +1,6 @@
 import math
 from PIL import Image
-
-class PuzzlePiece:
-    def __init__(self, coords, imgSource):
-        self.coords = coords
-        self.img = img
-
-    def getPiece(self):
-        pass
+from puzzlePiece import PuzzlePiece
 
 # This class is an abstract representation of a puzzle.
 # Given the relative path to the image file and a desired
@@ -19,6 +12,7 @@ class PuzzlePiece:
 # by 20 pixels.
 class Puzzle:
     def __init__(self, imgSource, size):
+        self.src = imgSource
         self.img = Image.open(imgSource)
         self.pieceSize = size
         self.puzzleVertices = self._coords()
@@ -50,7 +44,9 @@ class Puzzle:
         
         for i in range(y1, y2, self.pieceSize):
             for j in range(x1, x2, self.pieceSize):
-                pieceBlocks.append((j, i, j + self.pieceSize, i + self.pieceSize))
+                pieceBlocks.append(\
+                    PuzzlePiece((j, i, j + self.pieceSize,\
+                                 i + self.pieceSize), self.src))
 
         return tuple(pieceBlocks)
 
@@ -61,7 +57,7 @@ class Puzzle:
         return self.img
 
     def getPieces(self):
-        pass
+        return self.pieces
 
     def showFullPuzzle(self):
         self.getFullPuzzle.show()
@@ -69,10 +65,25 @@ class Puzzle:
     def showFullImg(self):
         self.img.show()
 
-    def showPieces(self):
+    def showPieces(self, start=1, end=None, step=1):
+        # TODO: raise exeption if argument is NA
+        if end is None:
+            end = len(self.pieces) + 1
+        for i in range(start - 1, end, step):
+            self.img.crop(self.pieces[i].coords).show()
+
+    def saveFullPuzzle(self, path=None):
+        # TODO
         pass
+
+    def savePieces(self, path=None):
+        # TODO
+        pass
+
 # Some function calls that you can try out:
 # p30 = Puzzle('../images/python.png', 30)
 # p30.getFullPuzzle().show()
 # print(p30.getFullPuzzle().size)
-# print('Is ' + str(len(p30.pieces)) + ' = ' + str((p30.getFullPuzzle().size[0] / 30) ** 2) + ' true?')
+# print('Is ' + str(len(p30.pieces)) + ' = ' +\
+#       str((p30.getFullPuzzle().size[0] / 30) ** 2) + ' true?')
+# p30.showPieces(90,93,2)
