@@ -20,7 +20,14 @@
 ### Bowen
 - Set up GitHub Repo with teammates
 - Implemented puzzle generating mechanism(`puzzleCreator.py`, `puzzlePiece.py`, `util.py`)
+### Chris
+- Tested a few APIs for text generation.
+- Implemented a simple random text generator using one of the tested APIs (`words.js`).
 ## 3. Plans / Goals  
 ### Bowen
 - Find a way to assign different chances to each of the puzzle pieces for the rewarding system
 - Maybe find a way to make the puzzle pieces more like actual puzzle pieces instead of squares
+### Chris
+- Research more APIs for text sample generation since the one currently in use often provides samples with punctuation errors.
+- Add parameters to the random text generator to allow for different types of typing samples.
+- Start implementing accuracy checking functionality
