@@ -23,3 +23,4 @@
 ## 3. Plans / Goals  
 ### Bowen
 - Find a way to assign different chances to each of the puzzle pieces for the rewarding system
+- Maybe find a way to make the puzzle pieces more like actual puzzle pieces instead of squares
