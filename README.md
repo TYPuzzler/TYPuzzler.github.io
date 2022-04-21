@@ -19,7 +19,7 @@ Our goals for the main features of the app are:
 * Provide multiple puzzles for the user to solve
 
 
-## \~/src
+## \~/backend_puzzle
 Contains the code related to the backend puzzle processing mechanism
 
 ## \~/public
