@@ -28,7 +28,7 @@
 - Set up GitHub Repo with teammates.
 - Implemented puzzle generating mechanism(`puzzleCreator.py`, `puzzlePiece.py`, `util.py`).
 - Planned to use NumPy for seam carving but turned out Pillow is more than enough for the current stage and is much easier to implement.
-- Storage method of puzzles and pieces was a hard choice to make: either store each puzzle and piece as an individual image object which is faster but takes up more memory, or use coordinates as a reference and do the calculation/cutting on the fly which saves space but runs slightly slower. Went with the second method because the puzzles won't be accessed that often so space efficiency is favored.
+- Storage method of puzzles and pieces was a hard choice to make: either store each puzzle and piece as an individual image object which is faster to retrieve but takes up more memory, or use coordinates as a reference and do the calculation/cutting on the fly which saves space but runs slightly slower. Went with the second method because the puzzles won't be accessed that often so space efficiency is favored.
 ### Chris
 - Tested a few APIs for text generation.
 - Implemented a simple random text generator using one of the tested APIs (`words.js`).
