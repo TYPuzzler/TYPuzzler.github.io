@@ -5,9 +5,9 @@ from util import *
 import os
 
 # This class is an abstract representation of a puzzle.
-# A Puzzle is created using a square center crop of the
-# image that can fit in the most number of pieces of
-# the specified piece size.
+# A Puzzle is cropped out of the center of the image that
+# can fit in the most number of pieces of the specified
+# piece size.
 #
 # imgSource: the relative path to the image file
 # size: desired size of a single piece
@@ -15,8 +15,9 @@ import os
 # extensions.
 #
 # E.g.: p = Puzzle('path-to-image', 20, 'example') will
-# create a puzzle named example that's cut to a square
-# with each piece being 20 by 20 pixels.
+# create a puzzle named example; if image has size 110 by
+# 84 pixels, the puzzle will be 100 by 80 pixels which
+# means 5 by 4 pieces.
 class Puzzle:
     def __init__(self, imgSource, size, name):
         self.src = imgSource
@@ -25,24 +26,23 @@ class Puzzle:
         self.pieceSize = size
         self.puzzleVertices = self._coords()
         self.pieces = self._toPieces()
+        self.rarityChart = [None] * len(self.pieces)
+        self.rarity = None
 
     # Helper function that calculates and returns a tuple
     # of the coordinates of the top-left and bottom-right
     # vertices of the puzzle in form of (x1, y1, x2, y2).
     def _coords(self):
         width, height = self.img.size
-        shorter = min(width, height)
-        longer = max(width, height)
-        count = math.floor(shorter / self.pieceSize)
-        length = count * self.pieceSize
-        coord1 = math.floor((longer - length) / 2)
-        coord2 = math.floor((shorter - length) / 2)
-        coord3 = coord1 + length
-        coord4 = coord2 + length
-        if width >= height:
-            return (coord1, coord2, coord3, coord4)
-        else:
-            return (coord2, coord1, coord4, coord3)
+        cWidth = math.floor(width / self.pieceSize)
+        cHeight = math.floor(height / self.pieceSize)
+        newWidth = cWidth * self.pieceSize
+        newHeight = cHeight * self.pieceSize
+        coord1 = math.floor((width - newWidth) / 2)
+        coord2 = math.floor((height - newHeight) / 2)
+        coord3 = coord1 + newWidth
+        coord4 = coord2 + newHeight
+        return (coord1, coord2, coord3, coord4)
 
     # Helper function that calculates and returns a tuple
     # of the coordinates of the vertices of the puzzle.
@@ -119,11 +119,41 @@ class Puzzle:
         for piece in self.pieces:
             piece.save(path)
 
+    # Returns None if rarity is not set.
+    # Returns a tuple of probabilities of all the rarity
+    # classes(N, R, SR, SSR)
+    def getRarity(self):
+        return self.rarity
+
+    # Sets the rarities of all the pieces, default probs are:
+    #   P(N) = 0.55, P(R) = 0,25, P(SR) = 0.15, P(SSR) = 0.05
+    # chances: A tuple in the order (P(N), P(R), P(SR), P(SSR))
+    def setRarityChart(self, chances=(0.55, 0.25, 0.15, 0.05)):
+        size = len(self.pieces)
+        if size < 4:
+            for i in range(size):
+                self.rarityChart[i] = 'R'
+        elif size < 20:
+            self.rarityChart[0] = 'SSR'
+            self.rarityChart[1] = 'SR'
+            self.rarityChart[2] = 'R'
+            for i in range(3, size):
+                self.rarityChart[i] = 'N'
+        count = [math.floor(coeff * size) for coeff in chances]
+        n_class, r_class, sr_class, ssr_class = count
+        if sum(count) < size:
+            diff = size - sum(count)
+            for i in range(diff):
+                # TODO
+                pass
+
+
+
 # Some function calls that you can try out:
-# p30 = Puzzle('../images/python.png', 30, 'test')
+# p30 = Puzzle('../../images/python.png', 30, 'test')
 # p30.getFullPuzzle().show()
 # print(p30.getFullPuzzle().size)
 # print('Is ' + str(len(p30.pieces)) + ' = ' +\
-#       str((p30.getFullPuzzle().size[0] / 30) ** 2) + ' true?')
+#       str((p30.getFullPuzzle().size[0] / 30) * (p30.getFullPuzzle().size[1] / 30)) + ' true?')
 # p30.showPieces(92,200,1)
 # p30.savePieces()
