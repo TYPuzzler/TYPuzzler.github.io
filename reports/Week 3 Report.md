@@ -24,6 +24,7 @@
 ## 2. What We Did  
 ### Margaret
 - Researched technologies and tools for making the frontend and UI of the app.
+- Found React tools that can hopefully work nicely for creating the client interface and capturing input, but will need to narrow it down for what will work best with the backend's functions.
 ### Bowen
 - Set up GitHub Repo with teammates.
 - Implemented puzzle generating mechanism(`puzzleCreator.py`, `puzzlePiece.py`, `util.py`).
