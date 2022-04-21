@@ -8,8 +8,8 @@
 - Implemented puzzle generating mechanics
 - Random text generation
 - Basic frontend pages
-## 3. Plans / Goals  
-## Agenda
+## 3. Meeting Agenda
+- Start investigating options for our technology stack, try out ideas for small prototypes and foundational code
 # Contributions  
 ## 1. Last Week's Plans / Goals
 ### Margaret  
@@ -25,8 +25,10 @@
 ### Margaret
 - Researched technologies and tools for making the frontend and UI of the app.
 ### Bowen
-- Set up GitHub Repo with teammates
-- Implemented puzzle generating mechanism(`puzzleCreator.py`, `puzzlePiece.py`, `util.py`)
+- Set up GitHub Repo with teammates.
+- Implemented puzzle generating mechanism(`puzzleCreator.py`, `puzzlePiece.py`, `util.py`).
+- Planned to use NumPy for seam carving but turned out Pillow is more than enough for the current stage and is much easier to implement.
+- Storage method of puzzles and pieces was a hard choice to make: either store each puzzle and piece as an individual image object which is faster but takes up more memory, or use coordinates as a reference and do the calculation/cutting on the fly which saves space but runs slightly slower. Went with the second method because the puzzles won't be accessed that often so space efficiency is favored.
 ### Chris
 - Tested a few APIs for text generation.
 - Implemented a simple random text generator using one of the tested APIs (`words.js`).
