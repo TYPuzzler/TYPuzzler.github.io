@@ -4,7 +4,7 @@
 - Start investigating our technology stack  
 - Create small prototypes and foundational code for the web app  
 ## 2. What We Did  
-- Finalized Git repo set up
+- Finalized Git repo set upCancel changes
 - Implemented puzzle generating mechanics
 - Random text generation
 - Basic frontend pages
@@ -22,6 +22,8 @@
 - Started on basic react app frontend
 - Front is set up to start on next week typing UI
 ## 2. What We Did  
+### Margaret
+- Researched technologies and tools for making the frontend and UI of the app.
 ### Bowen
 - Set up GitHub Repo with teammates
 - Implemented puzzle generating mechanism(`puzzleCreator.py`, `puzzlePiece.py`, `util.py`)
@@ -29,6 +31,9 @@
 - Tested a few APIs for text generation.
 - Implemented a simple random text generator using one of the tested APIs (`words.js`).
 ## 3. Plans / Goals  
+### Margaret
+- Research more about APIs and frameworks for capturing user input and information, connecting to backend systems.
+- Implement more ideas for trying to create a basic frontend.
 ### Bowen
 - Find a way to assign different chances to each of the puzzle pieces for the rewarding system
 - Maybe find a way to make the puzzle pieces more like actual puzzle pieces instead of squares
