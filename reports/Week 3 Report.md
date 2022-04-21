@@ -4,7 +4,7 @@
 - Start investigating our technology stack  
 - Create small prototypes and foundational code for the web app  
 ## 2. What We Did  
-- Finalized Git repo set upCancel changes
+- Finalized Git repo set up
 - Implemented puzzle generating mechanics
 - Random text generation
 - Basic frontend pages
