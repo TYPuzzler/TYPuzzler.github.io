@@ -30,3 +30,13 @@ Contains all the puzzle images
 
 ## \~/typuzzler
 Contains code related to the front end website
+
+Make sure all commands to run the frontend are run in the typuzzler directory
+
+Setup:
+
+npm install
+
+To run:
+
+npm start
