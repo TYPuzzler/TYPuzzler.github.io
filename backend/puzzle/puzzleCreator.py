@@ -52,13 +52,15 @@ class Puzzle:
         count = 1
         for i in range(y1, y2, self.pieceSize):
             for j in range(x1, x2, self.pieceSize):
-                pieceBlocks.append(\
-                    PuzzlePiece((j, i, j + self.pieceSize,\
-                                 i + self.pieceSize),\
-                                 self.src, self.name, count))
-                count += 1
+                vert = (j, i, j + self.pieceSize, i + self.pieceSize)
+                if not self._isTransparentPiece(self.img.crop(vert)):
+                    pieceBlocks.append( PuzzlePiece(vert, self.src, self.name, count))
+                    count += 1
 
         return tuple(pieceBlocks)
+
+    def _isTransparentPiece(self, img):
+        return False
 
     # Returns an Image object of the puzzle.
     def getFullPuzzle(self):
@@ -150,10 +152,10 @@ class Puzzle:
 
 
 # Some function calls that you can try out:
-# p30 = Puzzle('../../images/python.png', 30, 'test')
-# p30.getFullPuzzle().show()
+p30 = Puzzle('../../images/Python_(programming_language).png', 30, 'test')
+p30.getFullPuzzle().show()
 # print(p30.getFullPuzzle().size)
-# print('Is ' + str(len(p30.pieces)) + ' = ' +\
-#       str((p30.getFullPuzzle().size[0] / 30) * (p30.getFullPuzzle().size[1] / 30)) + ' true?')
+print('Is ' + str(len(p30.pieces)) + ' = ' + str((p30.getFullPuzzle().size[0] / 30) * (p30.getFullPuzzle().size[1] / 30)) + ' true?')
 # p30.showPieces(92,200,1)
 # p30.savePieces()
+p30.saveFullPuzzle()
