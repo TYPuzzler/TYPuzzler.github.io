@@ -20,11 +20,15 @@
 - Setting up GitHub Repo and start working/experimenting on different ways of cutting images into pieces  
 ### Eric  
 - Started on basic react app frontend
-- Front is set up to start on next week typing UI
+- Frontend is set up to start on next week typing UI
 ## 2. What We Did  
 ### Margaret
 - Researched technologies and tools for making the frontend and UI of the app.
 - Found React tools that can hopefully work nicely for creating the client interface and capturing input, but will need to narrow it down for what will work best with the backend's functions.
+### Eric  
+- Started on basic react app frontend
+- Debugged node js build failures
+- Frontend is set up to start on next week typing UI
 ### Bowen
 - Set up GitHub Repo with teammates.
 - Implemented puzzle generating mechanism(`puzzleCreator.py`, `puzzlePiece.py`, `util.py`).
@@ -44,3 +48,6 @@
 - Research more APIs for text sample generation since the one currently in use often provides samples with punctuation errors.
 - Add parameters to the random text generator to allow for different types of typing samples.
 - Start implementing accuracy checking functionality
+### Eric  
+- Work on refining the navigation UI
+- Start on typing UI
