@@ -2,9 +2,10 @@
 
 TYPuzzler is a typing practice application developed by Chris Choi, Margaret Li, Bowen Tian and Eric Yoon. Practice typing while collecting pieces to solve a puzzle. We hope this makes learning to type enjoyable and exciting!
 
-Product description: Our product is an app to practice typing. It will allow users to complete typing exercises, and earn pieces of a puzzle as they go. Users will be able to view and download the whole picture when they finish a puzzle. It will be a browser app accessible through a public URL.
+## Product Description
+Our product is an app to practice typing. It will allow users to complete typing exercises, and earn pieces of a puzzle as they go. Users will be able to view and download the whole picture when they finish a puzzle. It will be a browser app accessible through a public URL.
 
-Our goals for the main features of the app are:
+## App Goals
 
 * Allow user to practice typing exercises of text snippets in real time
 
@@ -18,22 +19,22 @@ Our goals for the main features of the app are:
 
 * Provide multiple puzzles for the user to solve
 
-
-## \~/backend_puzzle
+## Repository Layout
+### \~/backend_puzzle
 Contains the code related to the backend puzzle processing mechanism
 
-## \~/public
+### \~/public
 Contains the public webpage files
 
-## \~/images
+### \~/images
 Contains all the puzzle images
 
-## \~/typuzzler
+### \~/typuzzler
 Contains code related to the front end website
 
 Make sure all commands to run the frontend are run in the typuzzler directory
 
-Setup:
+## Setup
 
 npm install
 
