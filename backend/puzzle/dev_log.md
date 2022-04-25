@@ -8,4 +8,6 @@
 - ~~TODO: Set Rarity~~
 
 # 04/25/22
-- Set rarity done
+- `puzzleCreator.py` Set rarity implemented
+- `puzzlePiece.py` Set & get rarity implemented
+- `main.py` Created to isolate small tests (`.gitignore`)
