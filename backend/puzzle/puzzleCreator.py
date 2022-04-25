@@ -26,8 +26,9 @@ class Puzzle:
         self.pieceSize = size
         self.puzzleVertices = self._coords()
         self.pieces = self._toPieces()
+        self.rarity = (0.55, 0.25, 0.15, 0.05)
         self.rarityChart = [None] * len(self.pieces)
-        self.rarity = None
+        self.setRarityChart(self.rarity)
 
     # Helper function that calculates and returns a tuple
     # of the coordinates of the top-left and bottom-right
@@ -121,41 +122,51 @@ class Puzzle:
         for piece in self.pieces:
             piece.save(path)
 
-    # Returns None if rarity is not set.
+    # Returns (0.55, 0.25, 0.15, 0.05) if rarity is not set.
     # Returns a tuple of probabilities of all the rarity
-    # classes(N, R, SR, SSR)
+    # levels(N, R, SR, SSR)
     def getRarity(self):
         return self.rarity
 
-    # Sets the rarities of all the pieces, default probs are:
+    # Funtion that sets the rarities of all the pieces,
+    # default probs are:
     #   P(N) = 0.55, P(R) = 0,25, P(SR) = 0.15, P(SSR) = 0.05
     # chances: A tuple in the order (P(N), P(R), P(SR), P(SSR))
-    def setRarityChart(self, chances=(0.55, 0.25, 0.15, 0.05)):
+    def setRarityChart(self, rarity):
         size = len(self.pieces)
         if size < 4:
+            self.rarity = (0, 1, 0, 0)
             for i in range(size):
                 self.rarityChart[i] = 'R'
         elif size < 20:
+            self.rarity = (1 - 3/size, 1/size, 1/size, 1/size)
             self.rarityChart[0] = 'SSR'
             self.rarityChart[1] = 'SR'
             self.rarityChart[2] = 'R'
             for i in range(3, size):
                 self.rarityChart[i] = 'N'
-        count = [math.floor(coeff * size) for coeff in chances]
-        n_class, r_class, sr_class, ssr_class = count
-        if sum(count) < size:
-            diff = size - sum(count)
-            for i in range(diff):
-                # TODO
-                pass
+        else:
+            self.rarity = rarity
+            count = [math.floor(coeff * size) for coeff in rarity]
+            n_class, r_class, sr_class, ssr_class = count
+            if sum(count) < size:
+                diff = size - sum(count)
+                for i in range(diff):
+                    self.rarityChart[size - 1 - i] = 'R'
+            idx = 0
+            while idx < sum(count):
+                if idx < n_class:
+                    self.rarityChart[idx] = 'N'
+                elif idx < n_class+r_class:
+                    self.rarityChart[idx] = 'R'
+                elif idx < sum(count) - ssr_class:
+                    self.rarityChart[idx] = 'SR'
+                else:
+                    self.rarityChart[idx] = 'SSR'
+                idx += 1
+        self._updatePieces()
 
-
-
-# Some function calls that you can try out:
-p30 = Puzzle('../../images/Python_(programming_language).png', 30, 'test')
-p30.getFullPuzzle().show()
-# print(p30.getFullPuzzle().size)
-print('Is ' + str(len(p30.pieces)) + ' = ' + str((p30.getFullPuzzle().size[0] / 30) * (p30.getFullPuzzle().size[1] / 30)) + ' true?')
-# p30.showPieces(92,200,1)
-# p30.savePieces()
-p30.saveFullPuzzle()
+    # Private function that updates the rarity of the pieces
+    def _updatePieces(self):
+        for i in range(len(self.pieces)):
+            self.pieces[i]._setRarity(self.rarityChart[i])

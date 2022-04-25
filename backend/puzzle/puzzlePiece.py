@@ -14,6 +14,7 @@ class PuzzlePiece:
         self.src = imgSource
         self.name = name
         self.num = num
+        self.rarity = None
 
     # Shows this piece in a new window
     def show(self):
@@ -30,3 +31,9 @@ class PuzzlePiece:
                 path += self.src[:index+1]
         path += 'puzzle_' + self.name + '_piece_' + str(self.num) + '.png'
         Image.open(self.src).crop(self.coords).save(path)
+
+    def _setRarity(self, rarity):
+        self.rarity = rarity
+
+    def getRarity(self):
+        return self.rarity
