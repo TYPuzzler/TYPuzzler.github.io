@@ -29,6 +29,8 @@ class PuzzlePiece:
             index = self.src.rfind('/')
             if index != -1:
                 path += self.src[:index+1]
+            else:
+                path += '/'
         path += 'puzzle_' + self.name + '_piece_' + str(self.num) + '.png'
         Image.open(self.src).crop(self.coords).save(path)
 
