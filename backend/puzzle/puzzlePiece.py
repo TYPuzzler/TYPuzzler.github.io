@@ -32,14 +32,20 @@ class PuzzlePiece:
         path += 'puzzle_' + self.name + '_piece_' + str(self.num) + '.png'
         Image.open(self.src).crop(self.coords).save(path)
 
+    # Private function called when puzzle is created with default
+    # or when rarity is reassigned.
     def _setRarity(self, rarity):
         self.rarity = rarity
 
+    # Returns the rarity level of this specific piece(N, R, SR or SSR)
     def getRarity(self):
         return self.rarity
 
+    # Returns the top-left and bottom-right corners' coordinates
+    # in the image(not puzzle) as a tuple.
     def getPos(self):
         return self.coords
 
+    # Returns the number of this piece in the puzzle.
     def getNum(self):
         return self.num
