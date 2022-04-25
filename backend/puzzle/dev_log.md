@@ -8,6 +8,8 @@
 - ~~TODO: Set Rarity~~
 
 # 04/25/22
-- `puzzleCreator.py` Set rarity implemented
+- `puzzleCreator.py` Set rarity implemented. Pieces created first then assigned with rarity.
 - `puzzlePiece.py` Set & get rarity implemented
 - `main.py` Created to isolate small tests (`.gitignore`)
+- `spec_doc.md` Created for documenting classes and functions for client(frontend)
+- TODO: Fill `spec_doc.md`

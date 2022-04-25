@@ -37,3 +37,9 @@ class PuzzlePiece:
 
     def getRarity(self):
         return self.rarity
+
+    def getPos(self):
+        return self.coords
+
+    def getNum(self):
+        return self.num
