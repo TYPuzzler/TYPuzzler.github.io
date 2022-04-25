@@ -1,5 +1,4 @@
-# TYPuzzler Development Log
-## By Bowen Tian
+# TYPuzzler Development Log --- Bowen Tian
 
 ## 04/21/22
 
