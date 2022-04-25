@@ -125,7 +125,7 @@ class Puzzle:
     # Returns (0.55, 0.25, 0.15, 0.05) if rarity is not set.
     # Returns a tuple of probabilities of all the rarity
     # levels(N, R, SR, SSR)
-    def getRarity(self):
+    def getRarityChart(self):
         return self.rarity
 
     # Funtion that sets the rarities of all the pieces,
@@ -133,6 +133,10 @@ class Puzzle:
     #   P(N) = 0.55, P(R) = 0,25, P(SR) = 0.15, P(SSR) = 0.05
     # chances: A tuple in the order (P(N), P(R), P(SR), P(SSR))
     def setRarityChart(self, rarity):
+        if min(rarity) < 0 or max(rarity > 1) or sum(rarity) != 1:
+            msg = 'Invalid combination of probabilities: ' + str(rarity)
+            raise PuzzleException(msg)
+
         size = len(self.pieces)
         if size < 4:
             self.rarity = (0, 1, 0, 0)
@@ -170,3 +174,12 @@ class Puzzle:
     def _updatePieces(self):
         for i in range(len(self.pieces)):
             self.pieces[i]._setRarity(self.rarityChart[i])
+
+    # Returns the rarity level of a certain piece.
+    def getRarityOf(self, num):
+        if num < 1 or num > len(self.pieces):
+            msg = 'The last piece is #' + str(len(self.pieces)) + \
+                  ', there\'s no piece #' + str(end) + '.'
+            raise NoSuchPieceException(msg)
+
+        return self.pieces[num - 1].getRarity()

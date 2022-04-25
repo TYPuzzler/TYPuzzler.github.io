@@ -11,8 +11,9 @@
 - ~~TODO: Set Rarity~~
 
 ### 04/25/22
-- `puzzleCreator.py` Set rarity implemented. Pieces created first then assigned with rarity.
+- `puzzleCreator.py` Set & get rarity implemented. Pieces created first then assigned with rarity.
 - `puzzlePiece.py` Set & get rarity implemented, getter functions implemented
 - `main.py` Created to isolate small tests (`.gitignore`)
 - `spec_doc.md` Created for documenting classes and functions for client(frontend)
+- `util.py` New `PuzzleException` added. Exception hierarchy updated: `PuzzleException` is the parent.
 - TODO: Fill `spec_doc.md`
