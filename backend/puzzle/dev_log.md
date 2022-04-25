@@ -6,11 +6,14 @@
 ##### `puzzleCreator.py`
 - Updated cropping mechanism from center square to center max pan.
 	- e.g. If an image of 110 by 84 pixels is passed in and puzzle size is 20, old algorithm would create a puzzle of size 80 by 80 pixels, new algorithm would be 100 by 80. Both in the center.
+##### `puzzleRoll.py`
+- Created for a random roll of a puzzle piece.
 ##### TODOs
 - ~~Get rid of transparent pieces(no solid color at all)~~
 - ~~Need getter functions to get coordinates for puzzle pieces~~
 - Inventory System
 - ~~Set Rarity~~
+- Finish `puzzleRoll.py`
 
 ### 04/25/22
 ##### `puzzleCreator.py`
