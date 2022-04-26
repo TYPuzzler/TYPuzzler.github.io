@@ -10,9 +10,9 @@
 #### TODOs
 - ~~Get rid of transparent pieces(no solid color at all)~~
 - ~~Need getter functions to get coordinates for puzzle pieces~~
-- Inventory System
+- ~~Inventory System~~ *Passed*
 - ~~Set Rarity~~
-- Finish `puzzleRoll.py`
+- ~~Finish `puzzleRoll.py`~~ *Passed*
 
 ## 04/25/22
 #### `puzzleCreator.py`
@@ -32,3 +32,5 @@
 - Created.
 #### TODOs
 - Fill `spec_doc.md`
+- **Inherited**: Inventory System
+- **Inherited**: Finish `puzzleRoll.py`
