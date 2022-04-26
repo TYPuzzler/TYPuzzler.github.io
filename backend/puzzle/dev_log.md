@@ -34,3 +34,7 @@
 - Fill `spec_doc.md`
 - **Inherited**: Inventory System
 - **Inherited**: Finish `puzzleRoll.py`
+
+## 04/26/22
+#### TODOs
+- Filter new piece.

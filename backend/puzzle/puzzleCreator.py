@@ -19,6 +19,8 @@ import random
 # create a puzzle named example; if image has size 110 by
 # 84 pixels, the puzzle will be 100 by 80 pixels which
 # means 5 by 4 pieces.
+
+
 class Puzzle:
     def __init__(self, imgSource, size, name):
         self.src = imgSource
@@ -29,7 +31,7 @@ class Puzzle:
         self.pieces = self._toPieces()
         self.rarity = (0.55, 0.25, 0.15, 0.05)
         self.rarityList = [None] * len(self.pieces)
-        self.rarityPool = {'N':[], 'R':[], 'SR':[], 'SSR':[]}
+        self.rarityPool = {'N': [], 'R': [], 'SR': [], 'SSR': []}
         self.setRarity(self.rarity)
 
     # Helper function that calculates and returns a tuple
@@ -57,7 +59,8 @@ class Puzzle:
             for j in range(x1, x2, self.pieceSize):
                 vert = (j, i, j + self.pieceSize, i + self.pieceSize)
                 if not self._isTransparentPiece(self.img.crop(vert)):
-                    pieceBlocks.append( PuzzlePiece(vert, self.src, self.name, count))
+                    pieceBlocks.append(PuzzlePiece(vert, self.src,
+                                                   self.name, count))
                     count += 1
 
         return tuple(pieceBlocks)
