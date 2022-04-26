@@ -7,7 +7,7 @@ function KeyPress() {
   });
 }
   
-function Signup() {
+function Typing() {
   return (
     <div className="App">
       TestPage Signup
@@ -16,4 +16,4 @@ function Signup() {
   );
 }
 
-export default Signup;
+export default Typing;
