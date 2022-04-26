@@ -18,6 +18,7 @@
 #### `puzzleCreator.py`
 - Set & get rarity implemented. Pieces created first then assigned with rarity.
 - Fully transparent pieces now won't be included thanks to `_isTransparentPiece`.
+- Rarity assignment updated. Instead of assigning in order(e.g. N,N,N,N,N,R,R,R,SR,SR,SSR), now is assigning randomly(e.g. SR,N,R,N,N,SSR,R,SR,R,N,N,R)
 - `savePieces` function updated to accept user argument including starting piece, ending piece and pace just like `showPieces`.
 #### `puzzlePiece.py`
 - Set & get rarity implemented, getter functions implemented.
@@ -27,5 +28,7 @@
 - Created for documenting classes and functions for client(frontend)
 #### `util.py`
 - New `PuzzleException` added. Exception hierarchy updated: `PuzzleException` is the parent.
+#### `puzzleInventory.py`
+- Created.
 #### TODOs
 - Fill `spec_doc.md`

@@ -3,7 +3,5 @@ from puzzleCreator import *
 
 class PuzzleRoller:
 
-
-
-	def roll(self, puzzle):
+	def getOneRandomPiece(self, puzzle):
 		pass

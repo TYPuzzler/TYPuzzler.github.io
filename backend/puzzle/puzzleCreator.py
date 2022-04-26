@@ -1,8 +1,9 @@
 import math
 from PIL import Image
-from puzzlePiece import PuzzlePiece
+from puzzlePiece import *
 from util import *
 import os
+import random
 
 # This class is an abstract representation of a puzzle.
 # A Puzzle is cropped out of the center of the image that
@@ -27,8 +28,9 @@ class Puzzle:
         self.puzzleVertices = self._coords()
         self.pieces = self._toPieces()
         self.rarity = (0.55, 0.25, 0.15, 0.05)
-        self.rarityChart = [None] * len(self.pieces)
-        self.setRarityChart(self.rarity)
+        self.rarityList = [None] * len(self.pieces)
+        self.rarityPool = {'N':[], 'R':[], 'SR':[], 'SSR':[]}
+        self.setRarity(self.rarity)
 
     # Helper function that calculates and returns a tuple
     # of the coordinates of the top-left and bottom-right
@@ -132,14 +134,14 @@ class Puzzle:
     # Returns (0.55, 0.25, 0.15, 0.05) if rarity is not set.
     # Returns a tuple of probabilities of all the rarity
     # levels(N, R, SR, SSR)
-    def getRarityChart(self):
+    def getRarity(self):
         return self.rarity
 
     # Funtion that sets the rarities of all the pieces,
     # default probs are:
     #   P(N) = 0.55, P(R) = 0,25, P(SR) = 0.15, P(SSR) = 0.05
     # chances: A tuple in the order (P(N), P(R), P(SR), P(SSR))
-    def setRarityChart(self, rarity):
+    def setRarity(self, rarity):
         if min(rarity) < 0 or max(rarity) > 1 or sum(rarity) != 1:
             msg = 'Invalid combination of probabilities: ' + str(rarity)
             raise PuzzleException(msg)
@@ -148,14 +150,14 @@ class Puzzle:
         if size < 4:
             self.rarity = (0, 1, 0, 0)
             for i in range(size):
-                self.rarityChart[i] = 'R'
+                self.rarityList[i] = 'R'
         elif size < 20:
             self.rarity = (1 - 3/size, 1/size, 1/size, 1/size)
-            self.rarityChart[0] = 'SSR'
-            self.rarityChart[1] = 'SR'
-            self.rarityChart[2] = 'R'
+            self.rarityList[0] = 'SSR'
+            self.rarityList[1] = 'SR'
+            self.rarityList[2] = 'R'
             for i in range(3, size):
-                self.rarityChart[i] = 'N'
+                self.rarityList[i] = 'N'
         else:
             self.rarity = rarity
             count = [math.floor(coeff * size) for coeff in rarity]
@@ -163,24 +165,34 @@ class Puzzle:
             if sum(count) < size:
                 diff = size - sum(count)
                 for i in range(diff):
-                    self.rarityChart[size - 1 - i] = 'R'
-            idx = 0
-            while idx < sum(count):
-                if idx < n_class:
-                    self.rarityChart[idx] = 'N'
-                elif idx < n_class+r_class:
-                    self.rarityChart[idx] = 'R'
-                elif idx < sum(count) - ssr_class:
-                    self.rarityChart[idx] = 'SR'
+                    self.rarityList[size - 1 - i] = 'R'
+            counter = 0
+            while counter < sum(count):
+                i = random.randint(0, sum(count) - 1)
+                if counter < n_class:
+                    if self.rarityList[i] is None:
+                        self.rarityList[i] = 'N'
+                        counter += 1
+                elif counter < n_class+r_class:
+                    if self.rarityList[i] is None:
+                        self.rarityList[i] = 'R'
+                        counter += 1
+                elif counter < sum(count) - ssr_class:
+                    if self.rarityList[i] is None:
+                        self.rarityList[i] = 'SR'
+                        counter += 1
                 else:
-                    self.rarityChart[idx] = 'SSR'
-                idx += 1
-        self._updatePieces()
+                    if self.rarityList[i] is None:
+                        self.rarityList[i] = 'SSR'
+                        counter += 1
+        self._updatePiecesAndPool()
 
     # Private function that updates the rarity of the pieces
-    def _updatePieces(self):
+    def _updatePiecesAndPool(self):
         for i in range(len(self.pieces)):
-            self.pieces[i]._setRarity(self.rarityChart[i])
+            r = self.rarityList[i]
+            self.pieces[i]._setRarity(r)
+            self.rarityPool[r].append(i)
 
     # Returns the rarity level of a certain piece.
     def getRarityOf(self, num):
