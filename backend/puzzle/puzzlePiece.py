@@ -8,6 +8,8 @@ from PIL import Image
 #   the puzzle piece is taken out.
 # name: the name of the puzzle, not the piece. Pieces don't
 #   have names.
+
+    
 class PuzzlePiece:
     def __init__(self, coords, imgSource, name, num):
         self.coords = coords

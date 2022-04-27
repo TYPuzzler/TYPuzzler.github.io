@@ -32,9 +32,9 @@
 - Created.
 #### TODOs
 - Fill `spec_doc.md`
-- **Inherited**: Inventory System
+- ~~**Inherited**: Inventory System~~ *No longer need*
 - **Inherited**: Finish `puzzleRoll.py`
 
 ## 04/26/22
 #### TODOs
-- Filter new piece.
+- Filter on new piece.
