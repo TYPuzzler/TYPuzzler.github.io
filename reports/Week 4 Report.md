@@ -9,14 +9,16 @@
 # Contributions  
 ## 1. Last Week's Plans / Goals
 ### Margaret  
--   
+- Research more about APIs and frameworks for capturing user input and information, connecting to backend systems.
+- Implement more ideas for trying to create a basic frontend.
 ### Chris  
 - Research more APIs for text sample generation since the one currently in use often provides samples with punctuation errors.
     - After discussing this part of the plan with the group, we decided to stick with the API currently being used to generate text samples and to postpone the search of other APIs until later.
 - Add parameters to the random text generator to allow for different types of typing samples.
 - Start implementing accuracy checking functionality
 ### Bowen  
-- 
+- Find a way to assign different chances to each of the puzzle pieces for the rewarding system
+- Maybe find a way to make the puzzle pieces more like actual puzzle pieces instead of squares
 ### Eric  
 - Work on refining the navigation UI
 - Start on typing UI
