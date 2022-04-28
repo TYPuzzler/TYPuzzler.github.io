@@ -39,7 +39,7 @@
 ## 3. Plans / Goals  
 ### Margaret
 - Catch up on last week's goals.
-- Implement frontend elements to try to connect to the backend elements
+- Implement frontend elements to try to connect to the backend elements.
 ### Bowen
 - 
 ### Chris
