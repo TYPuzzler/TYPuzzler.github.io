@@ -24,7 +24,7 @@
 - Start on typing UI
 ## 2. What We Did  
 ### Margaret
-- 
+- Reviewed more technologies and methods to use for the frontend.
 ### Eric  
 - Wasn't able to work on the project much this week
 - Added more pages to navigate for the entire frontend app
@@ -39,7 +39,8 @@
 - Did not start implementing the accuracy checking functionality.
 ## 3. Plans / Goals  
 ### Margaret
-- 
+- Catch up on last week's goals.
+- Implement frontend elements to try to connect to the backend elements.
 ### Bowen
 - 
 ### Chris
