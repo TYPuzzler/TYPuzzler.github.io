@@ -9,7 +9,8 @@
 # Contributions  
 ## 1. Last Week's Plans / Goals
 ### Margaret  
--   
+- Research more about APIs and frameworks for capturing user input and information, connecting to backend systems.
+- Implement more ideas for trying to create a basic frontend.
 ### Chris  
 - Research more APIs for text sample generation since the one currently in use often provides samples with punctuation errors.
     - After discussing this part of the plan with the group, we decided to stick with the API currently being used to generate text samples and to postpone the search of other APIs until later.
@@ -22,7 +23,7 @@
 - Start on typing UI
 ## 2. What We Did  
 ### Margaret
-- 
+- Reviewed more technologies and methods to use for the frontend.
 ### Eric  
 - Wasn't able to work on the project much this week
 - Added more pages to navigate for the entire frontend app
@@ -37,7 +38,8 @@
 - Did not start implementing the accuracy checking functionality.
 ## 3. Plans / Goals  
 ### Margaret
-- 
+- Catch up on last week's goals.
+- Implement frontend elements to try to connect to the backend elements
 ### Bowen
 - 
 ### Chris
