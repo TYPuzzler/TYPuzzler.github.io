@@ -29,7 +29,10 @@
 - Wasn't able to work on the project much this week
 - Added more pages to navigate for the entire frontend app
 ### Bowen
-- 
+- Updated cropping mechanism from center square to center max pan.
+- Set & get rarity implemented for `Puzzle`.
+- Fully transparent pieces now won't be included.
+- Set rarity implemented for `PuzzlePiece`, getter functions implemented.
 ### Chris
 - I was able to read some documentation as well as the source code from related projects that I completed for previous courses to help me with implementing the text generation and accuracy checking functionality.
 - I worked a little more on the random text generator in my working directory.
@@ -42,7 +45,9 @@
 - Catch up on last week's goals.
 - Implement frontend elements to try to connect to the backend elements.
 ### Bowen
-- 
+- Filter on new pieces.
+- Start on the document for puzzle.
+- Save gallary data.
 ### Chris
 - Complete a working version of text generation and accuracy checking functionality.
 - Discuss with team to determine whether or not the text generator should be parameterized to allow for different text lengths.
