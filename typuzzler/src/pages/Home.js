@@ -5,6 +5,11 @@ function Home() {
   return (
     <div className="App">
       TestPage Home
+      <Link to="/typing">
+        <button variant="outlined">
+          Start typing
+        </button>
+      </Link>
     </div>
   );
 }

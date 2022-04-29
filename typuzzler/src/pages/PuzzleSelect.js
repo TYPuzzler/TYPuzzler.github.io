@@ -1,19 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
-import Main from './Main';
+import '../App.css';
 import { Link } from "react-router-dom";
 
-function App() {
+function PuzzleSelect() {
   return (
     <div className="App">
-      <Link to="/">
+      PuzzleSelect
+      <Link to="/puzzle">
         <button variant="outlined">
-          Home
+          Next
         </button>
       </Link>
-      <Main />
     </div>
   );
 }
 
-export default App;
+export default PuzzleSelect;
