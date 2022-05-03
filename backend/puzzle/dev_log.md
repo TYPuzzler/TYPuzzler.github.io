@@ -33,7 +33,7 @@
 #### TODOs
 - Fill `spec_doc.md`
 - ~~**Inherited**: Inventory System~~ *No longer need*
-- **Inherited**: Finish `puzzleRoll.py`
+- ~~**Inherited**: Finish `puzzleRoll.py`~~ *Passed*
 
 ## 04/26/22
 #### TODOs
@@ -41,4 +41,6 @@
 
 ## 05/03/22
 #### Github Actions
-- Initial set up for PyTest
+- Initial set up for PyTest.
+#### TODOs
+- **Inherited**: Finish `puzzleRoll.py`
