@@ -38,3 +38,7 @@
 ## 04/26/22
 #### TODOs
 - Filter on new piece.
+
+## 05/03/22
+#### Github Actions
+- Initial set up
