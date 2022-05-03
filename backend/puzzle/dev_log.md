@@ -41,4 +41,4 @@
 
 ## 05/03/22
 #### Github Actions
-- Initial set up
+- Initial set up for PyTest
