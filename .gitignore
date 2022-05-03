@@ -15,6 +15,7 @@
 /backend/puzzle/dev_log.tex
 /backend/puzzle/dev_log.pdf
 /backend/puzzle/.texpadtmp
+/.env
 # misc
 .DS_Store
 .env.local
