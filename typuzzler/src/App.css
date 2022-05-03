@@ -5,14 +5,27 @@ body {
   height: 100%;
 }
 
+button {
+  background-color: #01a76f;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  margin: 5pt;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16pt;
+  font-weight: 600; 
+}
+
 .App {
   text-align: center;
   background-color: rgb(253, 250, 245);
   font-size: 14pt;
+  font-weight: 600;
   min-height: 600px;
   height: auto !important;
   height: 600px;
-  font-weight: 600;
   padding: 10pt;
   margin-left: 60pt;
   margin-right: 60pt;
