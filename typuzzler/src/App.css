@@ -1,5 +1,21 @@
+html,body { height:100%; }
+
+body {
+  background-color: rgb(64, 73, 155);
+  height: 100%;
+}
+
 .App {
   text-align: center;
+  background-color: rgb(253, 250, 245);
+  font-size: 14pt;
+  min-height: 600px;
+  height: auto !important;
+  height: 600px;
+  font-weight: 600;
+  padding: 10pt;
+  margin-left: 60pt;
+  margin-right: 60pt;
 }
 
 .App-logo {

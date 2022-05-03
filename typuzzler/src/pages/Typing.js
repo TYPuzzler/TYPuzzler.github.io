@@ -7,7 +7,7 @@ function KeyPress() {
     console.log(key)
   });
 }
-  
+
 function Typing() {
   return (
     <div className="App">
