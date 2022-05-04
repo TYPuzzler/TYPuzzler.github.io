@@ -1,0 +1,16 @@
+name: MochaJS
+on: [push]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+      - name: Install MochaJS
+        run: npm install mocha
+        run: cd typuzzler
+        run: npm test
