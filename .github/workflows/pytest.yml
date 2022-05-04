@@ -11,11 +11,11 @@ jobs:
         uses: actions/setup-python@v1
         with:
           python-version: 3.6
-      - name: Install pipenv
+      - name: Install Pillow
         run: |
-          python -m pip install --upgrade pipenv wheel
+          python -m pip install --upgrade Pillow
       - name: Install Pytest
-        run: pip install pytest
+        run: python -m pip install pytest
       - name: Run tests with pytest
         run: |
-          pipenv run test -v
+          python -m pytest

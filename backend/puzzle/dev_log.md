@@ -31,16 +31,20 @@
 #### `puzzleInventory.py`
 - Created.
 #### TODOs
-- Fill `spec_doc.md`
+- ~~Fill `spec_doc.md`~~ *Passed*
 - ~~**Inherited**: Inventory System~~ *No longer need*
 - ~~**Inherited**: Finish `puzzleRoll.py`~~ *Passed*
 
 ## 04/26/22
 #### TODOs
-- Filter on new piece.
+- ~~**Inherited**: Fill `spec_doc.md`~~ *Passed*
+- ~~Filter on new piece.~~ *Passed*
 
 ## 05/03/22
-#### Github Actions
+#### Test & CI
 - Initial set up for PyTest.
+- Github Actions set up for pytest.
 #### TODOs
 - **Inherited**: Finish `puzzleRoll.py`
+- **Inherited**: Fill `spec_doc.md`
+- **Inherited**: Filter on new piece.
