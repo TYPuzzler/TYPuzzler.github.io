@@ -1,5 +1,9 @@
 name: PyTest
-on: push
+on:
+  push:
+    tags:
+      - ci-build
+      - ci-py
 
 jobs:
   test:
