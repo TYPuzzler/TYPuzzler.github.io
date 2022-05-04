@@ -3,6 +3,7 @@ on:
   push:
     tags:
       - ci-build
+      - ci-js
 
 jobs:
   test:
