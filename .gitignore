@@ -10,8 +10,10 @@
 
 # production
 /build
-/backend/puzzle/__pycache__
-/backend/puzzle/main.py
+/backend/puzzle/src/__pycache__
+/backend/puzzle/tests/.pytest_cache
+/backend/puzzle/.pytest_cache
+/backend/puzzle/src/main.py
 /backend/puzzle/dev_log.tex
 /backend/puzzle/dev_log.pdf
 /backend/puzzle/.texpadtmp
