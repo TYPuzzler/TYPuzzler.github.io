@@ -11,4 +11,7 @@ jobs:
         with:
           node-version: '16'
       - name: Install MochaJS
-        run: cd typuzzler; npm install mocha; npm test
+        run: npm install mocha
+      - run: cd typuzzler
+      - name: Run MochaJS Tests
+        run: npm test
