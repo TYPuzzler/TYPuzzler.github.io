@@ -1,5 +1,8 @@
 name: MochaJS
-on: [push]
+on:
+  push:
+    tags:
+      - ci-build
 
 jobs:
   test:
