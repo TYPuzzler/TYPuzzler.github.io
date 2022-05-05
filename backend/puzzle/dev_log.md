@@ -49,3 +49,7 @@
 - **Inherited**: Fill `spec_doc.md`
 - **Inherited**: Filter on new piece.
 - ~~Write a simple test.~~
+
+## 05/04/22
+#### `puzzleCreator.py`
+- `imageSource` now is URL to image instead of relative path.
