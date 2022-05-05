@@ -28,7 +28,7 @@
 ### Margaret
 - Investigated frontend design choices and ways to implement elements to interact with processing and backend functions.
 ### Eric  
--
+- Added basic css for page formatting and color
 ### Bowen
 - Implemented puzzle generation from URL.
 - Configured GitHub Actions for automatic execution of Python tests using Pytest.
@@ -51,4 +51,4 @@
 - Finish displaying the generated text on the typing page.
 - Finish the accuracy functionality of input
 ### Eric  
--
+- Display hardcoded puzzle in time for the beta release
