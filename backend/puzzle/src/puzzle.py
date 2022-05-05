@@ -1,6 +1,6 @@
 import math
 from PIL import Image
-from puzzlePiece import *
+from piece import *
 from util import *
 import os
 import io

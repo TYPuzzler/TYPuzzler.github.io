@@ -1,5 +1,5 @@
 import random
-from puzzleCreator import *
+from puzzle import *
 
 # Some function calls that you can try out:
 size = 30

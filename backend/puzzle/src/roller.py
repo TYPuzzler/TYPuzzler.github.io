@@ -1,5 +1,5 @@
 import random
-from puzzleCreator import *
+from puzzle import *
 
 
 class PuzzleRoller:
