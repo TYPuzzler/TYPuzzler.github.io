@@ -8,6 +8,9 @@ url_py_logo = 'https://github.com/TYPuzzler/TYPuzzler.github.io/blob/main/images
 puzzlePath = newPuzzle(url_py_logo, 'python_logo', size)
 url_hu_logo = 'https://github.com/TYPuzzler/TYPuzzler.github.io/blob/main/images/husky.png?raw=true'
 puzzlePath = newPuzzle(url_hu_logo, 'husky_logo', size)
+url_js_logo = 'https://github.com/TYPuzzler/TYPuzzler.github.io/blob/main/images/JS.png?raw=true'
+puzzlePath = newPuzzle(url_js_logo, 'JS_logo', size)
+
 # img = Image.open(puzzlePath)
 # img.show()
 print(puzzlePath)
