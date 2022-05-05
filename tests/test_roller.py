@@ -7,7 +7,7 @@ def test_if_get_all_pieces():
     name = 'JS_logo'
     ls = []
     for i in range(100):
-        url = roll(name, True)
+        url = roll(name)
         if url != 'No piece left':
             ls.append(url)
     assert len(ls) == 25

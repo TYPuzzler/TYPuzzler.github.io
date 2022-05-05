@@ -17,4 +17,4 @@ jobs:
       - name: Install MochaJS
         run: npm install mocha
       - name: Run MochaJS Tests
-        run: cd typuzzler; npm test
+        run: npm test

@@ -46,8 +46,8 @@
 - Github Actions set up for pytest.
 #### TODOs
 - ~~**Inherited**: Finish `puzzleRoll.py`~~
-- **Inherited**: Fill `spec_doc.md`
-- **Inherited**: Filter on new piece.
+- ~~**Inherited**: Fill `spec_doc.md`~~*Passed*
+- ~~**Inherited**: Filter on new piece.~~*Passed*
 - ~~Write a simple test.~~
 
 ## 05/04/22
@@ -58,3 +58,8 @@
 - Test added
 #### Styel
 - File name changed to adhere to PEP8
+#### TODOs
+- **Inherited**: Fill `spec_doc.md`
+- **Inherited**: Filter on new piece.
+
+## 05/05/22
