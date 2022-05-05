@@ -65,3 +65,11 @@ button {
     transform: rotate(360deg);
   }
 }
+
+.Character-current {
+  background-color: #09d3ac;
+}
+
+.Character-out {
+  color: silver;
+}

@@ -5,21 +5,34 @@ import { generate } from '../utils/words'
 import React, { useCallback, useState } from 'react';
 
 
-function KeyPress() {
+/*function KeyPress() {
   useKeyPress(key => {
-    console.log(key)
+    console.log(key);
   });
-}
+}*/
 
 function Typing() {
-  // This makes initialWords a mutable string.
+  
+  // The sample text
   const [initialWords, setInitialWords] = useState('Loading...');
+
+  // The substring of the sample text that has been correctly typed
+  const [correctChars, setCorrectChars] = useState('');
+
+  // The current character to be typed
+  const [currentChar, setCurrentChar] = useState('');
+
+  // The rest of the sample text
+  const [incomingChars, setIncomingChars] = useState('Loading...');
+
   const fetchData = useCallback(async () => {
     // Get text sample from generator
     const data = await generate()
 
     // set state with the result
     setInitialWords(data);
+    setCurrentChar(data.charAt(0));
+    setIncomingChars(data.substring(1));
   });
 
   React.useEffect(() => {
@@ -28,6 +41,20 @@ function Typing() {
       // make sure to catch any error
       .catch(console.error);;
   }, [])
+
+
+
+  function KeyPress() {
+    useKeyPress(key => {
+      console.log(key);
+      if (key == currentChar) {
+        setCorrectChars(correctChars + currentChar);
+        setCurrentChar(incomingChars.charAt(0));
+        setIncomingChars(incomingChars.substring(1));
+      }
+      setInitialWords(initialWords.substring(1));
+    });
+  }
 
   return (
     <div className="App">
@@ -38,7 +65,15 @@ function Typing() {
         </button>
       </Link>
       <p>
-      {initialWords}
+        <span className="Character-correct">
+          {correctChars}
+        </span>
+        <span className="Character-current">
+          {currentChar}
+        </span>
+        <span>
+          {incomingChars}
+        </span>
       </p>
       <KeyPress></KeyPress>
     </div>
