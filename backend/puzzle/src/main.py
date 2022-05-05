@@ -3,7 +3,8 @@ from puzzleCreator import *
 
 # Some function calls that you can try out:
 size = 30
-p = Puzzle('../../../images/Python_(programming_language).png', size, 'test')
+url = 'https://github.com/TYPuzzler/TYPuzzler.github.io/blob/main/images/Python_(programming_language).png?raw=true'
+p = Puzzle(url, size, 'test')
 # p.getFullPuzzle().show()
 # print(p.getFullPuzzle().size)
 # print('Is ' + str(len(p.pieces)) + ' = ' + str((p.getFullPuzzle().size[0] / size) * (p.getFullPuzzle().size[1] / size)) + ' true?')

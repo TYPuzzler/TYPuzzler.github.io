@@ -3,14 +3,16 @@ from PIL import Image
 from puzzlePiece import *
 from util import *
 import os
+import io
 import random
+import urllib.request
 
 # This class is an abstract representation of a puzzle.
 # A Puzzle is cropped out of the center of the image that
 # can fit in the most number of pieces of the specified
 # piece size.
 #
-# imgSource: the relative path to the image file
+# imgSource: the URL to the image file
 # size: desired size of a single piece
 # name: name of the puzzle should be a string without file
 # extensions.
@@ -24,7 +26,9 @@ import random
 class Puzzle:
     def __init__(self, imgSource, size, name):
         self.src = imgSource
-        self.img = Image.open(imgSource)
+        with urllib.request.urlopen(self.src) as url:
+            f = io.BytesIO(url.read())
+        self.img = Image.open(f)
         self.name = name
         self.pieceSize = size
         self.puzzleVertices = self._coords()
