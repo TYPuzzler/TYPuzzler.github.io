@@ -48,3 +48,4 @@
 - **Inherited**: Finish `puzzleRoll.py`
 - **Inherited**: Fill `spec_doc.md`
 - **Inherited**: Filter on new piece.
+- ~~Write a simple test.~~
