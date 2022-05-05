@@ -1,15 +1,14 @@
 /**
- * This function generates a random sample text and returns it as a string
+ * This function generates a random sample text and returns it as a string.
+ * Returns a sample 200 characters long by default, but can be customized
+ * with the length parameter.
 */
 export const generate = async (length = 200) => {
-    // TODO: Return text in a different format so that we don't have to extract it from an array.
-    //var temp = "";
     var temp;
     await fetch('https://fakerapi.it/api/v1/texts?_quantity=1&_characters=' + length)
         .then(response => response.json())
         .then(data => {
             temp = data.data[0].content;
         }).finally(() => temp);
-    //console.log(temp);
     return temp;
 };
