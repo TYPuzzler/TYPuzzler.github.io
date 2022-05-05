@@ -5,15 +5,15 @@ from interface import *
 # Some function calls that you can try out:
 size = 100
 url_py_logo = 'https://github.com/TYPuzzler/TYPuzzler.github.io/blob/main/images/Python.png?raw=true'
-puzzlePath = newPuzzle(url_py_logo, 'python_logo', size)
+py = Puzzle(url_py_logo, size, 'python_logo')
+py.savePieces('../../../images/')
 url_hu_logo = 'https://github.com/TYPuzzler/TYPuzzler.github.io/blob/main/images/husky.png?raw=true'
-puzzlePath = newPuzzle(url_hu_logo, 'husky_logo', size)
+hu = Puzzle(url_hu_logo, size, 'husky_logo')
 url_js_logo = 'https://github.com/TYPuzzler/TYPuzzler.github.io/blob/main/images/JS.png?raw=true'
-puzzlePath = newPuzzle(url_js_logo, 'JS_logo', size)
+js = Puzzle(url_js_logo, size, 'JS_logo')
 
 # img = Image.open(puzzlePath)
 # img.show()
-print(puzzlePath)
 # p.getFullPuzzle().show()
 # print(p.getFullPuzzle().size)
 # print('Is ' + str(len(p.pieces)) + ' = ' + str((p.getFullPuzzle().size[0] / size) * (p.getFullPuzzle().size[1] / size)) + ' true?')
