@@ -10,6 +10,4 @@ def test_if_get_all_pieces():
         url = roll(name, True)
         if url != 'No piece left':
             ls.append(url)
-            print('yes')
-        print(url)
     assert len(ls) == 25
