@@ -21,8 +21,6 @@ function Typing() {
   // The rest of the sample text
   const [incomingChars, setIncomingChars] = useState('Loading...');
 
-  const [wordCount, setWordCount] = useState(0);
-
   // Note: correctChars + currentChar + incomingChars creates the whole sample text
 
   // The time when user started typing
@@ -30,6 +28,12 @@ function Typing() {
 
   // Users words per minute
   const [wpm, setWpm] = useState('');
+
+  // The user's typing accuracy
+  const[accuracy, setAccuracy] = useState('');
+
+  // The characters that the user has typed
+  const[typed, setTyped] = useState('');
 
 
   const fetchData = useCallback(async () => {
@@ -39,7 +43,6 @@ function Typing() {
     // set state with the result
     setCurrentChar(data.charAt(0));
     setIncomingChars(data.substring(1));
-    setWordCount(data.length/5);
   });
 
   React.useEffect(() => {
@@ -55,6 +58,8 @@ function Typing() {
     useKeyPress(key => {
       console.log(key) // For testing purposes
 
+      setTyped(typed + key);
+
       if (correctChars.length == 0) {
         // Start timing when the user starts typing
         setStartTime(new Date().getTime());
@@ -68,7 +73,8 @@ function Typing() {
         if (incomingChars.length == 0) {
           // User is done typing
           var duration = ((new Date().getTime()) - startTime) / 60000.0; // convert to minutes
-          setWpm("WPM: " + (wordCount / duration).toFixed(2));
+          setWpm("WPM: " + ((correctChars.length / 5) / duration).toFixed(2));
+          setAccuracy("ACC: " + ((correctChars.length * 100) / typed.length).toFixed(2) + "%")
         }
       }
 
@@ -97,6 +103,9 @@ function Typing() {
       </p>
       <p>
         {wpm}
+      </p>
+      <p>
+        {accuracy}
       </p>
       <KeyPress></KeyPress>
     </div>
