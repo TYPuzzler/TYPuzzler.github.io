@@ -32,6 +32,7 @@
 ### Bowen
 - Implemented puzzle generation from URL.
 - Configured GitHub Actions for automatic execution of Python tests using Pytest.
+- Created a simple test.
 - Started implementing filters for puzzle pieces.
 ### Chris
 - I got the text generator to work with strings and am able to print them to console from the frontend.
