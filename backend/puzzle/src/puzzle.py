@@ -129,14 +129,18 @@ class Puzzle:
     # Saves the puzzle as a PNG in the given path.
     # path: must be an existing directory, if not given,
     #   default will be the same directory as the image.
+    # def saveFullPuzzle(self, path=None):
+    #     if path is None:
+    #         path = ''
+    #         index = self.src.rfind('/')
+    #         if index != -1:
+    #             path += self.src[:index+1]
+    #         path += 'full_puzzle_' + self.name + '.png'
+    #     self.getFullPuzzle().save(path)
     def saveFullPuzzle(self, path=None):
-        if path is None:
-            path = ''
-            index = self.src.rfind('/')
-            if index != -1:
-                path += self.src[:index+1]
-            path += 'full_puzzle_' + self.name + '.png'
+        path = '../../../images/full_puzzle_' + self.name + '.png'
         self.getFullPuzzle().save(path)
+        return path
 
     # Returns (0.55, 0.25, 0.15, 0.05) if rarity is not set.
     # Returns a tuple of probabilities of all the rarity

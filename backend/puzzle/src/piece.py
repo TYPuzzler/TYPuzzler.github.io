@@ -33,7 +33,7 @@ class PuzzlePiece:
                 path += self.src[:index+1]
             else:
                 path += '/'
-        path += 'puzzle_' + self.name + '_piece_' + str(self.num) + '.png'
+        path += self.name + '_piece_' + str(self.num) + '.png'
         Image.open(self.src).crop(self.coords).save(path)
 
     # Private function called when puzzle is created with default
