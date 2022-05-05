@@ -45,11 +45,15 @@
 - Initial set up for PyTest.
 - Github Actions set up for pytest.
 #### TODOs
-- **Inherited**: Finish `puzzleRoll.py`
+- ~~**Inherited**: Finish `puzzleRoll.py`~~
 - **Inherited**: Fill `spec_doc.md`
 - **Inherited**: Filter on new piece.
 - ~~Write a simple test.~~
 
 ## 05/04/22
-#### `puzzleCreator.py`
+#### `puzzle.py`
 - `imageSource` now is URL to image instead of relative path.
+#### `roller.py`
+- Implemented roller. Given a puzzle name returns URL of a piece of new puzzle.
+#### Styel
+- File name changed to adhere to PEP8

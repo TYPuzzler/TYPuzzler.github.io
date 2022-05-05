@@ -137,7 +137,7 @@ class Puzzle:
     #             path += self.src[:index+1]
     #         path += 'full_puzzle_' + self.name + '.png'
     #     self.getFullPuzzle().save(path)
-    def saveFullPuzzle(self, path=None):
+    def saveFullPuzzle(self):
         path = '../../../images/full_puzzle_' + self.name + '.png'
         self.getFullPuzzle().save(path)
         return path
