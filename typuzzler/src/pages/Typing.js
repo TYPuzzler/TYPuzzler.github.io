@@ -4,13 +4,6 @@ import { Link } from "react-router-dom";
 import { generate } from '../utils/words'
 import React, { useCallback, useState } from 'react';
 
-
-/*function KeyPress() {
-  useKeyPress(key => {
-    console.log(key);
-  });
-}*/
-
 function Typing() {
   // The substring of the sample text that has been correctly typed
   const [correctChars, setCorrectChars] = useState('');
@@ -52,8 +45,6 @@ function Typing() {
       .catch(console.error);;
   }, [])
 
-
-
   function KeyPress() {
     useKeyPress(key => {
       console.log(key) // For testing purposes
@@ -77,8 +68,6 @@ function Typing() {
           setAccuracy("ACC: " + ((correctChars.length * 100) / typed.length).toFixed(2) + "%")
         }
       }
-
-
     });
   }
 
