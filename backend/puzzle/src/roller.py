@@ -1,7 +1,7 @@
 import random
-from puzzle import *
 
+def roll(name):
+    obt = open('../../../images/'+name+'/obtained.txt', 'rw')
+    meta = open('../../../images/'+name+'/metadata.txt', 'r')
 
-class PuzzleRoller:
-    def getOneRandomPiece(self, puzzle):
-        pass
+    

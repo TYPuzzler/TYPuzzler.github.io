@@ -7,7 +7,7 @@ size = 100
 # py = Puzzle(url_py_logo, size, 'python_logo')
 # py.savePieces('../../../images/')
 # f = open('../../../images/python_logo/metadata.txt', 'w')
-# ls = ['python_logo','',str(py.getFullPuzzle().size[0])+','+str(py.getFullPuzzle().size[1]),'']
+# ls = [str(py.getFullPuzzle().size[0])+','+str(py.getFullPuzzle().size[1]),'',str(len(py.pieces)),'']
 # dx,dy = py.pieces[0].coords[0], py.pieces[0].coords[1]
 # for piece in py.pieces:
 #     ls.append(str(piece.num))
@@ -22,7 +22,7 @@ size = 100
 # hu = Puzzle(url_hu_logo, size, 'husky_logo')
 # hu.savePieces('../../../images/husky_logo/')
 # f = open('../../../images/husky_logo/metadata.txt', 'w')
-# ls = ['husky_logo','',str(hu.getFullPuzzle().size[0])+','+str(hu.getFullPuzzle().size[1]),'']
+# ls = [str(hu.getFullPuzzle().size[0])+','+str(hu.getFullPuzzle().size[1]),'',str(len(hu.pieces)),'']
 # dx,dy = hu.pieces[0].coords[0], hu.pieces[0].coords[1]
 # for piece in hu.pieces:
 #     ls.append(str(piece.num))
@@ -37,7 +37,7 @@ url_js_logo = 'https://github.com/TYPuzzler/TYPuzzler.github.io/blob/main/images
 js = Puzzle(url_js_logo, size, 'JS_logo')
 # js.savePieces('../../../images/JS_logo/')
 f = open('../../../images/JS_logo/metadata.txt', 'w')
-ls = ['JS_logo','',str(js.getFullPuzzle().size[0])+','+str(js.getFullPuzzle().size[1]),'']
+ls = [str(js.getFullPuzzle().size[0])+','+str(js.getFullPuzzle().size[1]),'',str(len(js.pieces)),'']
 dx,dy = js.pieces[0].coords[0], js.pieces[0].coords[1]
 for piece in js.pieces:
     ls.append(str(piece.num))
