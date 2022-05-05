@@ -1,4 +1,6 @@
 from PIL import Image
+import io
+import urllib.request
 
 # This class is an abstract representation of a piece of puzzle
 # taken out of a certain puzzle.
@@ -34,7 +36,9 @@ class PuzzlePiece:
             else:
                 path += '/'
         path += self.name + '_piece_' + str(self.num) + '.png'
-        Image.open(self.src).crop(self.coords).save(path)
+        with urllib.request.urlopen(self.src) as url:
+            f = io.BytesIO(url.read())
+        Image.open(f).crop(self.coords).save(path)
 
     # Private function called when puzzle is created with default
     # or when rarity is reassigned.
