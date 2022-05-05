@@ -7,7 +7,7 @@
 ## 3. Plans / Goals
 - Create beta version of our project
 ## 4. Meeting Agenda
--
+- Discuss which major components of our product need to be ready for the beta release and how to demonstrate them.
 # Contributions  
 ## 1. Last Week's Plans / Goals
 ### Margaret
@@ -26,7 +26,7 @@
 
 ## 2. What We Did  
 ### Margaret
--
+- Investigated frontend design choices and ways to implement elements to interact with processing and backend functions.
 ### Eric  
 -
 ### Bowen
@@ -39,7 +39,7 @@
 
 ## 3. Plans / Goals  
 ### Margaret
--
+- Have major components of the frontend (typing interface, puzzle interface) ready for beta release. 
 ### Bowen
 -
 ### Chris
