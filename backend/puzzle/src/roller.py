@@ -1,6 +1,8 @@
 import random
 
-
+# Given the name of a puzzle, returns the URL to a undiscovered piece of that puzzle
+# or a message that says "No piece left". Uses a text log to keep track of which
+# pieces are obtained.
 def roll(nameOfPuzzle):
     meta = open('../../../images/' + nameOfPuzzle + '/metadata.txt', 'r')
     ml = meta.readlines()
