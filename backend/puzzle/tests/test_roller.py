@@ -10,4 +10,4 @@ def test_if_get_all_pieces():
         url = roll(name)
         ls.append(url)
         print(url)
-    assert len(url) == 25
+    assert len(ls) == 25
