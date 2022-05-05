@@ -7,7 +7,7 @@
 ## 3. Plans / Goals
 - Create beta version of our project
 ## 4. Meeting Agenda
--
+- Discuss which major components of our product need to be ready for the beta release and how to demonstrate them.
 # Contributions  
 ## 1. Last Week's Plans / Goals
 ### Margaret
@@ -26,11 +26,14 @@
 
 ## 2. What We Did  
 ### Margaret
--
+- Investigated frontend design choices and ways to implement elements to interact with processing and backend functions.
 ### Eric  
 -
 ### Bowen
--
+- Implemented puzzle generation from URL.
+- Configured GitHub Actions for automatic execution of Python tests using Pytest.
+- Created a simple test.
+- Started implementing filters for puzzle pieces.
 ### Chris
 - I got the text generator to work with strings and am able to print them to console from the frontend.
     - The way that I was previously implementing it was based on an implementation I did using React classes, which does not work on this project since we are using hooks instead.
@@ -39,9 +42,11 @@
 
 ## 3. Plans / Goals  
 ### Margaret
--
+- Have major components of the frontend (typing interface, puzzle interface) ready for beta release. 
 ### Bowen
--
+- Finish filtering.
+- Simplify puzzle generation proces and get rid of unnecessary funtions.
+- Figure out a way to store user progress,
 ### Chris
 - Finish displaying the generated text on the typing page.
 - Finish the accuracy functionality of input

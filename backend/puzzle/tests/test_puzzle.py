@@ -1,5 +1,5 @@
 import pytest
-from src.puzzleCreator import *
+from src.puzzle import *
 
 
 # test number of puzzle
