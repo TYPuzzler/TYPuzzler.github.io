@@ -55,5 +55,6 @@
 - `imageSource` now is URL to image instead of relative path.
 #### `roller.py`
 - Implemented roller. Given a puzzle name returns URL of a piece of new puzzle.
+- Test added
 #### Styel
 - File name changed to adhere to PEP8

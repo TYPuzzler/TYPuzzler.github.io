@@ -22,7 +22,5 @@ jobs:
         run: python -m pip install --upgrade pipenv
       - name: Install Pytest
         run: python -m pip install pytest
-      - name: Go to directory
-        run: cd backend/puzzle
       - name: Run tests with pytest
         run: pipenv run test -v
