@@ -4,10 +4,12 @@ from interface import *
 
 # Some function calls that you can try out:
 size = 100
-url = 'https://github.com/TYPuzzler/TYPuzzler.github.io/blob/main/images/Python_(programming_language).png?raw=true'
-puzzlePath = newPuzzle(url, 'test', size)
-img = Image.open(puzzlePath)
-img.show()
+url_py_logo = 'https://github.com/TYPuzzler/TYPuzzler.github.io/blob/main/images/Python_(programming_language).png?raw=true'
+puzzlePath = newPuzzle(url_py_logo, 'python_logo', size)
+url_hu_logo = 'https://github.com/TYPuzzler/TYPuzzler.github.io/blob/main/images/husky_logo.png?raw=true'
+puzzlePath = newPuzzle(url_hu_logo, 'husky_logo', size)
+# img = Image.open(puzzlePath)
+# img.show()
 print(puzzlePath)
 # p.getFullPuzzle().show()
 # print(p.getFullPuzzle().size)
