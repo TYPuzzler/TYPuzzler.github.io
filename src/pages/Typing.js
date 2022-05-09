@@ -76,7 +76,7 @@ function Typing() {
 
   return (
     <div className="App">
-      Typing 
+      <p>Type the text you see below. Aim for perfect accuracy first, then try improving your speed!</p>
       <Link to="/puzzleSelect">
         <button variant="outlined">
           Next

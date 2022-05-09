@@ -5,10 +5,9 @@ import { Link } from "react-router-dom";
 function PuzzleSelect() {
   var piece = "https://github.com/TYPuzzler/TYPuzzler.github.io/blob/main/images/JS_logo/full_puzzle_JS_logo.png?raw=true";
 
-
   return (
     <div className="App">
-      PuzzleSelect
+      <p>Great job! You got a puzzle piece.</p>
       <Link to="/puzzle">
         <button variant="outlined">
           Next

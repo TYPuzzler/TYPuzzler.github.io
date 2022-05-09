@@ -41,3 +41,7 @@ npm install
 To run:
 
 npm start
+
+To deploy on Github Pages:
+
+npm run deploy
