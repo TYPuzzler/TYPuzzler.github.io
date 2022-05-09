@@ -38,4 +38,7 @@ def demo_roll(nameOfPuzzle):
     url = 'https://github.com/TYPuzzler/TYPuzzler.github.io/blob/main/images/'\
         + nameOfPuzzle + '/' + nameOfPuzzle + '_piece_' + str(n)\
         + '.png?raw=true'
+    with open('url.json', 'w', encoding='utf-8') as f:
+        json.dump(url, f, ensure_ascii=False, indent=4)
+    
     return json.dumps(url)
