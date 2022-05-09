@@ -1,5 +1,5 @@
 import random
-import urllib2
+import urllib.request
 import json
 
 
@@ -29,7 +29,7 @@ def roll(nameOfPuzzle, TEST=False):
 
 def demo_roll(nameOfPuzzle):
     metaURL = 'https://github.com/TYPuzzler/TYPuzzler.github.io/blob/main/images/' + nameOfPuzzle + '/metadata.txt?raw=true'
-    meta = urllib2.urlopen(metaURL)
+    meta = urllib.request.urlopen(metaURL)
     
     ml = meta.readlines()
 
