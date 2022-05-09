@@ -62,4 +62,8 @@
 - **Inherited**: Fill `spec_doc.md`
 - **Inherited**: Filter on new piece.
 
-## 05/05/22
+## 05/09/22
+#### `roller.py` --> `interface.py`
+- Renamed to `interface.py`.
+- `demo_roll` implemented for beta release.
+- URL packaged to JSON

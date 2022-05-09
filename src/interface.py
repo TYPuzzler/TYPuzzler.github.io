@@ -1,4 +1,6 @@
 import random
+import urllib2
+import json
 
 
 # Given the name of a puzzle, returns the URL to a undiscovered piece of that puzzle
@@ -36,4 +38,4 @@ def demo_roll(nameOfPuzzle):
     url = 'https://github.com/TYPuzzler/TYPuzzler.github.io/blob/main/images/'\
         + nameOfPuzzle + '/' + nameOfPuzzle + '_piece_' + str(n)\
         + '.png?raw=true'
-    return url
+    return json.dumps(url)
