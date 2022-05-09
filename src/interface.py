@@ -40,5 +40,7 @@ def demo_roll(nameOfPuzzle):
         + '.png?raw=true'
     with open('url.json', 'w', encoding='utf-8') as f:
         json.dump(url, f, ensure_ascii=False, indent=4)
-    
+
     return json.dumps(url)
+
+demo_roll('JS_logo')
