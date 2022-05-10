@@ -8,13 +8,14 @@ function PuzzleSelect() {
   return (
     <div className="App">
       <p>Great job! You got a puzzle piece.</p>
+      <br/>
+      <img src={piece}></img>
+      <br/>
       <Link to="/puzzle">
         <button variant="outlined">
           Next
         </button>
       </Link>
-      <br/>
-      <img src={piece}></img>
     </div>
   );
 }

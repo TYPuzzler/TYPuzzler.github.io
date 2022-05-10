@@ -67,9 +67,22 @@ button {
 }
 
 .Character-current {
-  background-color: #09d3ac;
+  background-color: #d1a428;
 }
 
 .Character-correct {
   color: silver;
+}
+
+.Typing-text {
+  font-family: courier;
+  font-size: 28px;
+  padding-top: 30px;
+  padding-right: 35px;
+  padding-bottom: 30px;
+  padding-left: 35px;
+  border-style: solid;
+  border-width: 3px;
+  border-color: #50117a;
+  text-align: left;
 }

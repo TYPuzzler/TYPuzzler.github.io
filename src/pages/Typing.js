@@ -77,12 +77,7 @@ function Typing() {
   return (
     <div className="App">
       <p>Type the text you see below. Aim for perfect accuracy first, then try improving your speed!</p>
-      <Link to="/puzzleSelect">
-        <button variant="outlined">
-          Next
-        </button>
-      </Link>
-      <p>
+      <p className="Typing-text">
         <span className="Character-correct">
           {correctChars}
         </span>
@@ -100,6 +95,11 @@ function Typing() {
         {accuracy}
       </p>
       <KeyPress></KeyPress>
+      <Link to="/puzzleSelect">
+        <button variant="outlined">
+          Next
+        </button>
+      </Link>
     </div>
   );
 }
