@@ -23,7 +23,7 @@ Our product is an app to practice typing. It will allow users to complete typing
 ### \~/src/
 Contains the code related to the backend puzzle processing mechanism
 
-### \~src/utils
+### \~/src/utils
 Contains the backend for text sample generation
 
 ### \~/public
