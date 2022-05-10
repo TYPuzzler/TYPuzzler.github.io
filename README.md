@@ -20,7 +20,7 @@ Our product is an app to practice typing. It will allow users to complete typing
 * Provide multiple puzzles for the user to solve
 
 ## Repository Layout
-### \~/src/
+### \~/src/puzzle
 Contains the code related to the backend puzzle processing mechanism
 
 ### \~/src/utils
