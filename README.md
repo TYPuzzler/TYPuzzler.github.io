@@ -63,7 +63,9 @@ npm run deploy
 ### JavaScript
 1. Add test files to ~/test
 2. Commit with tag `ci-js`
-
-## JavaScript & Python
+### Python
+1. Add test files to ~/tests
+2. Commit with tag `ci-py`
+### JavaScript & Python
 1. Add JavaScript test files to ~/test and add Python test files to ~/tests
 2. Commit with tag `ci-build`
