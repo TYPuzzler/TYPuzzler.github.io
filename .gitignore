@@ -11,9 +11,10 @@
 # production
 /build
 /src/__pycache__
+/src/puzzle/__pycache__
 /tests/.pytest_cache
 /.pytest_cache
-/src/main.py
+/src/puzzle/main.py
 /.env
 # misc
 .DS_Store

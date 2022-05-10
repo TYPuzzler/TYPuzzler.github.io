@@ -20,10 +20,10 @@ Our product is an app to practice typing. It will allow users to complete typing
 * Provide multiple puzzles for the user to solve
 
 ## Repository Layout
-### \~/src/
+### \~/src/puzzle
 Contains the code related to the backend puzzle processing mechanism
 
-### \~src/utils
+### \~/src/utils
 Contains the backend for text sample generation
 
 ### \~/public
@@ -63,7 +63,9 @@ npm run deploy
 ### JavaScript
 1. Add test files to ~/test
 2. Commit with tag `ci-js`
-
-## JavaScript & Python
+### Python
+1. Add test files to ~/tests
+2. Commit with tag `ci-py`
+### JavaScript & Python
 1. Add JavaScript test files to ~/test and add Python test files to ~/tests
 2. Commit with tag `ci-build`
