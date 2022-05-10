@@ -20,8 +20,11 @@ Our product is an app to practice typing. It will allow users to complete typing
 * Provide multiple puzzles for the user to solve
 
 ## Repository Layout
-### \~/backend_puzzle
+### \~/src/
 Contains the code related to the backend puzzle processing mechanism
+
+### \~src/utils
+Contains the backend for text sample generation
 
 ### \~/public
 Contains the public webpage files
@@ -29,7 +32,7 @@ Contains the public webpage files
 ### \~/images
 Contains all the puzzle images
 
-### \~/typuzzler
+### \~/src
 Contains code related to the front end website
 
 Make sure all commands to run the frontend are run in the typuzzler directory
