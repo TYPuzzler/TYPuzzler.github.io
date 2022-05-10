@@ -126,6 +126,20 @@ class Puzzle:
         for i in range(start - 1, end, step):
             self.pieces[i].save(path)
 
+    def saveGreyPieces(self, path=None, start=1, end=None, step=1):
+        if end is None:
+            end = len(self.pieces)
+        if start < 1:
+            msg = 'Starting point is puzzle piece #1.'
+            raise NoSuchPieceException(msg)
+        if end > len(self.pieces):
+            msg = 'The last piece is #' + str(len(self.pieces)) + \
+                  ', there\'s no piece #' + str(end) + '.'
+            raise NoSuchPieceException(msg)
+
+        for i in range(start - 1, end, step):
+            self.pieces[i].grey().save(path)
+
     # Saves the puzzle as a PNG in the given path.
     # path: must be an existing directory, if not given,
     #   default will be the same directory as the image.
@@ -138,8 +152,13 @@ class Puzzle:
     #         path += 'full_puzzle_' + self.name + '.png'
     #     self.getFullPuzzle().save(path)
     def saveFullPuzzle(self):
-        path = '../../../images/full_puzzle_' + self.name + '.png'
+        path = '../../images/full_puzzle_' + self.name + '.png'
         self.getFullPuzzle().save(path)
+        return path
+
+    def saveGrayPuzzle(self):
+        path = '../../images/'+self.name+'/gray_puzzle_' + self.name + '.png'
+        self.getFullPuzzle().convert('LA').save(path)
         return path
 
     # Returns (0.55, 0.25, 0.15, 0.05) if rarity is not set.

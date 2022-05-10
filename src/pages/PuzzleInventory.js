@@ -14,9 +14,13 @@ function PuzzleInventory() {
     top: '200px',
     left: '450px'
   };
+
   return (
     <div className="App">
-      PuzzleInventory
+      <p>Here's your puzzle progress so far. Keep it up!</p>
+      <br/>
+      <img src={puzzle}></img>
+      <br/>
       <Link to="/">
         <button variant="outlined">
           Home
@@ -27,7 +31,6 @@ function PuzzleInventory() {
         <img src={puzzle} style={puzzleLocation}></img>
         <img src={piece} style={pieceLocation}></img>
       </div>
-      
     </div>
   );
 }
