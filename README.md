@@ -39,15 +39,15 @@ Make sure all commands to run the frontend are run in the typuzzler directory
 
 ## Setup
 
-npm install
+`npm install`
 
 To run:
 
-npm start
+`npm start`
 
 To deploy on Github Pages:
 
-npm run deploy
+`npm run deploy`
 
 ## Local Testing
 
