@@ -7,26 +7,17 @@ function PuzzleInventory() {
   var pieceLocation = {
     position: 'absolute',
     top: '300px',
-    left: '750px'
+    left: '775px'
   };
   var puzzleLocation = {
     position: 'absolute',
     top: '200px',
-    left: '450px'
+    left: '475px'
   };
 
   return (
     <div className="App">
       <p>Here's your puzzle progress so far. Keep it up!</p>
-      <br/>
-      <img src={puzzle}></img>
-      <br/>
-      <Link to="/">
-        <button variant="outlined">
-          Home
-        </button>
-      </Link>
-      <br/>
       <div>
         <img src={puzzle} style={puzzleLocation}></img>
         <img src={piece} style={pieceLocation}></img>
