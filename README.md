@@ -3,7 +3,7 @@
 TYPuzzler is a typing practice application developed by Chris Choi, Margaret Li, Bowen Tian and Eric Yoon. Practice typing while collecting pieces to solve a puzzle. We hope this makes learning to type enjoyable and exciting!
 
 ## Product Description
-Our product is an app to practice typing. It will allow users to complete typing exercises, and earn pieces of a puzzle as they go. Users will be able to view and download the whole picture when they finish a puzzle. It will be a browser app accessible through a public URL: https://typuzzler.github.io/
+Our product is an app to practice typing. It will allow users to complete typing exercises, and earn pieces of a puzzle as they go. Users will be able to view and download the whole picture when they finish a puzzle. It will be a browser app accessible through a public URL.
 
 ## App Goals
 
@@ -57,7 +57,20 @@ To deploy on Github Pages:
     - `npm install mocha`
 3. Run the tests
     - `npm test`
-
+### Python
+1. Add test files to ~/tests
+2. Install Homebrew
+    - `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
+3. Install Python:
+    - `brew install python`
+4. Install Pillow
+    - `python -m pip install --upgrade Pillow`
+5. Install Pipenv
+    - `python -m pip install --upgrade pipenv`
+6. Install Pytest
+    - `python -m pip install pytest`
+7. Run tests with pytest
+    - `pipenv run test -v`
 ## CI testing
 
 ### JavaScript
