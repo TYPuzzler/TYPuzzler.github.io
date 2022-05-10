@@ -45,3 +45,22 @@ npm start
 To deploy on Github Pages:
 
 npm run deploy
+
+## Local Testing
+
+### JavaScript
+1. Add test files to ~/test
+2. Install MochaJS
+    - `npm install mocha`
+3. Run the tests
+    - `npm test`
+
+## CI testing
+
+### JavaScript
+1. Add test files to ~/test
+2. Commit with tag `ci-js`
+
+## JavaScript & Python
+1. Add JavaScript test files to ~/test and add Python test files to ~/tests
+2. Commit with tag `ci-build`
