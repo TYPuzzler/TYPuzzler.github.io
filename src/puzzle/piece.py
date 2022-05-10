@@ -22,7 +22,9 @@ class PuzzlePiece:
 
     # Shows this piece in a new window
     def show(self):
-        Image.open(self.src).crop(self.coords).show()
+        with urllib.request.urlopen(self.src) as url:
+            f = io.BytesIO(url.read())
+        Image.open(f).crop(self.coords).show()
 
     # Saves this puzzle piece as a PNG in the given directory.
     # path: must be an existing directory, if not given,
@@ -57,3 +59,8 @@ class PuzzlePiece:
     # Returns the number of this piece in the puzzle.
     def getNum(self):
         return self.num
+
+    def gray(self):
+        with urllib.request.urlopen(self.src) as url:
+            f = io.BytesIO(url.read())
+        return Image.open(f).crop(self.coords).convert('LA')

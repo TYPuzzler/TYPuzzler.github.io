@@ -1,14 +1,11 @@
 import random
 from PIL import Image
 from puzzle import *
-from roller import *
 # Some function calls that you can try out:
 
-for i in range(100):
-    print(roll('JS_logo'))
 # Image.open(io.BytesIO(urllib.request.urlopen(url).read())).show()
 
-# size = 100
+size = 100
 # url_py_logo = 'https://github.com/TYPuzzler/TYPuzzler.github.io/blob/main/images/Python.png?raw=true'
 # py = Puzzle(url_py_logo, size, 'python_logo')
 # py.savePieces('../../../images/')
@@ -39,9 +36,12 @@ for i in range(100):
 # f.writelines("\n".join(ls))
 # f.close()
 
-# url_js_logo = 'https://github.com/TYPuzzler/TYPuzzler.github.io/blob/main/images/JS.png?raw=true'
-# js = Puzzle(url_js_logo, size, 'JS_logo')
-# js.savePieces('../../../images/JS_logo/')
+url_js_logo = 'https://github.com/TYPuzzler/TYPuzzler.github.io/blob/main/images/JS.png?raw=true'
+js = Puzzle(url_js_logo, size, 'JS_logo')
+js.saveGrayPuzzle()
+js.pieces[9].show()
+js.pieces[9].gray().show()
+# js.savePieces('../../images/JS_logo/')
 # f = open('../../../images/JS_logo/metadata.txt', 'w')
 # ls = [str(js.getFullPuzzle().size[0])+','+str(js.getFullPuzzle().size[1]),'',str(len(js.pieces)),'']
 # dx,dy = js.pieces[0].coords[0], js.pieces[0].coords[1]
