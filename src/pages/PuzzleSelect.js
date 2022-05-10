@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 //import {PythonShell} from 'python-shell';
 
 function PuzzleSelect() {
-  var piece = "https://github.com/TYPuzzler/TYPuzzler.github.io/blob/main/images/JS_logo/full_puzzle_JS_logo.png?raw=true";
+  var piece = "https://github.com/TYPuzzler/TYPuzzler.github.io/blob/main/images/JS_logo/JS_logo_piece_10.png?raw=true";
 
   return (
     <div className="App">
