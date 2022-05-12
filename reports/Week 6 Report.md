@@ -31,6 +31,7 @@
 - Added hard-coded versions of the various puzzle reward components in the application.
     - The positions of the puzzle progress currently does not adapt to screen size, so I'll have to fix that.
 ### Eric
+- Helped with recording voice for the beta release
 ## 3. Plans / Goals  
 ### Margaret
 - Investigate and try options for communicating data between Python and React.
@@ -40,3 +41,4 @@
 - Make the puzzle progress position adapt to screen size
 - Do more research on the Web Storage API
 ### Eric
+- Help frontend team with Python to React connection
