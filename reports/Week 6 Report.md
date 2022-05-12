@@ -26,6 +26,8 @@
 ### Margaret
 - Improved UI of the pages. Added instructions and explanations, and made the typing interface more intuitive.
 ### Bowen
+- Created grayscale filtering on images and puzzle pieces
+- Used logs and text files to store metadata and inventory
 ### Chris
 - Finished the typing exercise functionality of the project
 - Added hard-coded versions of the various puzzle reward components in the application.
@@ -37,6 +39,7 @@
 - Investigate and try options for communicating data between Python and React.
 - Add more UI elements and interfaces for the user to interact with, and functionalities in the typing interface.
 ### Bowen
+- Set up database/python server for front/back end data transfer.
 ### Chris
 - Make the puzzle progress position adapt to screen size
 - Do more research on the Web Storage API
