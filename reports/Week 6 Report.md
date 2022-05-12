@@ -1,7 +1,8 @@
 # Team Report
 ## 1. Last Week's Plans / Goals
 - Create beta version of our project
-## 2. What We Did  
+## 2. What We Did 
+- Created a beta version of our project
 ## 3. Plans / Goals
 ## 4. Meeting Agenda
 # Contributions  
@@ -21,6 +22,9 @@
 ### Margaret
 ### Bowen
 ### Chris
+- Finished the typing exercise functionality of the project
+- Added hard-coded versions of the various puzzle reward components in the application.
+    - The positions of the puzzle progress currently does not adapt to screen size, so I'll have to fix that.
 ### Eric
 ## 3. Plans / Goals  
 ### Margaret
