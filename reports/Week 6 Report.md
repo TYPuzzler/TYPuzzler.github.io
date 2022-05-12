@@ -5,6 +5,7 @@
 - Created a beta version of our project
 ## 3. Plans / Goals
 ## 4. Meeting Agenda
+- Discuss negative observations of current process
 # Contributions  
 ## 1. Last Week's Plans / Goals
 ### Margaret
