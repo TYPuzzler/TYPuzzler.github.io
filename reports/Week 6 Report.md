@@ -4,8 +4,11 @@
 ## 2. What We Did 
 - Created a beta version of our project
 ## 3. Plans / Goals
+- Continue implementing goals of our project, especially the puzzle reward use case
+- Provide comprehensive documentation
 ## 4. Meeting Agenda
 - Discuss negative observations of current process
+- Discuss what components of our project are most important to focus on next
 # Contributions  
 ## 1. Last Week's Plans / Goals
 ### Margaret
@@ -21,6 +24,7 @@
 - Display hardcoded puzzle in time for the beta release
 ## 2. What We Did  
 ### Margaret
+- Improved UI of the pages. Added instructions and explanations, and made the typing interface more intuitive.
 ### Bowen
 ### Chris
 - Finished the typing exercise functionality of the project
@@ -29,6 +33,8 @@
 ### Eric
 ## 3. Plans / Goals  
 ### Margaret
+- Investigate and try options for communicating data between Python and React.
+- Add more UI elements and interfaces for the user to interact with, and functionalities in the typing interface.
 ### Bowen
 ### Chris
 - Make the puzzle progress position adapt to screen size
