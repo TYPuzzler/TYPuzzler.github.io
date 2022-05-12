@@ -30,4 +30,6 @@
 ### Margaret
 ### Bowen
 ### Chris
+- Make the puzzle progress position adapt to screen size
+- Do more research on the Web Storage API
 ### Eric
