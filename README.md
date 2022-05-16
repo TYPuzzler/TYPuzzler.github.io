@@ -7,17 +7,17 @@ Our product is a web browser app to practice typing. It will allow users to comp
 
 ## App Goals
 
-* Allow user to practice typing exercises of text snippets in real time
+* Allow the user to practice typing exercises of text snippets in real time
 
 * Track and report user’s typing accuracy and speed at the end of a typing exercise
 
 * During a typing exercise, only advance if the user enters the right current character
 
-* Reward the user with a puzzle piece (chosen by user from three hidden pieces) when an exercise is finished
+* (Work in progress) Reward the user with a puzzle piece when an exercise is finished
 
-* Show the completed puzzle when all pieces have been obtained, then allow the user to download the full image
+* (Work in progress) Show the completed puzzle when all pieces have been obtained, then allow the user to download the full image
 
-* Provide multiple puzzles for the user to solve
+* (Work in progress) Provide multiple puzzles for the user to solve
 
 ## Repository Layout
 ### \~/src/puzzle
