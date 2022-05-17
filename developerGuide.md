@@ -24,12 +24,12 @@ Contains all the puzzle images
 Contains code related to the front end website
 
 ### \~/test
-Tests related to frontend and JS
-Update with test directories if necessary
+Tests related to frontend and JS.
+Update with test directories if necessary.
 
 ### \~/tests
-Tests related to backend Python code
-Update with test directories if necessary
+Tests related to backend Python code.
+Update with test directories if necessary.
 
 ## How to build
 See Setup in README.md
