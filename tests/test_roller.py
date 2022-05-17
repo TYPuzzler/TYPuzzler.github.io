@@ -1,5 +1,5 @@
 import pytest
-from src.roller import *
+from src.puzzle.roller import *
 
 
 # test roller function
