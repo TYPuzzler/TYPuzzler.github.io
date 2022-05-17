@@ -32,7 +32,17 @@ Tests related to backend Python code.
 Update with test directories if necessary.
 
 ## How to build
-See Setup in README.md
+In root directory of the projcet, run the following in a terminal to start:
+```
+npm install
+npm start
+```
+
+To deploy on Github Pages:
+
+```
+npm run deploy
+```
 
 ## How to test
 ### JavaScript
