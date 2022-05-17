@@ -1,6 +1,8 @@
 import pytest
-from src.puzzle.roller import *
-
+import sys
+  
+sys.path.insert(0, '/src/puzzle/')
+from roller import *
 
 # test roller function
 def test_if_get_all_pieces():

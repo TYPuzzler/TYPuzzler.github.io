@@ -1,6 +1,8 @@
 import pytest
-from src.puzzle.puzzle import *
-
+import sys
+  
+sys.path.insert(0, '/src/puzzle/')
+from puzzle import *
 
 # test number of puzzle
 def test_number_of_pieces():
