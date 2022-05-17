@@ -126,6 +126,7 @@ class Puzzle:
         for i in range(start - 1, end, step):
             self.pieces[i].save(path)
 
+    # Similar to savePieces() but saves the puzzle pieces in greyscale.
     def saveGreyPieces(self, path=None, start=1, end=None, step=1):
         if end is None:
             end = len(self.pieces)
