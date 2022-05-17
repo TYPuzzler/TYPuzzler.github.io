@@ -2,7 +2,7 @@ import pytest
 import sys
   
 sys.path.insert(0, '/src/puzzle/')
-from roller import *
+from interface import *
 
 # test roller function
 def test_if_get_all_pieces():
