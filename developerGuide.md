@@ -3,7 +3,9 @@
 ## How to obtain the source code
 
 On your computer’s command prompt, run the following:
+```
 git clone https://github.com/TYPuzzler/TYPuzzler.github.io.git
+```
 
 ## Layout of directories
 ### \~/src/puzzle
