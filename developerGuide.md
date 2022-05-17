@@ -56,6 +56,9 @@ npm install mocha
 ```
 npm test
 ```
+4. For CI testing:
+   1. Add test files to ~/test
+   2. Commit with tag `ci-js`
 ### Python
 Run commands in a terminal from project root directory.
 1. Add test files to `~/tests`
@@ -83,13 +86,10 @@ python -m pip install pytest
 ```
 pipenv run test -v
 ```
-### JavaScript
-1. Add test files to ~/test
-2. Commit with tag `ci-js`
-### Python
-1. Add test files to ~/tests
-2. Commit with tag `ci-py`
-### JavaScript & Python
+8. For CI testing:
+   1. Add test files to ~/tests
+   2. Commit with tag `ci-py`
+## Project CI Testing
 1. Add JavaScript test files to ~/test and add Python test files to ~/tests
 2. Commit with tag `ci-build`
 
