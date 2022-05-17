@@ -95,10 +95,10 @@ pipenv run test -v
 
 ## How to add new tests
 
-For frontend react JS tests:
+For frontend react JS tests:  
 Add new js files to the test directory. (Should change the directory name to testFrontend)
 
-For backend python tests:
+For backend python tests:  
 Add new python files to the tests directory. (testBackend)
 
 ## How to build a release
