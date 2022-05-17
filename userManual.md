@@ -6,7 +6,7 @@ TYPuzzler is a browser app game for practicing typing, where you complete puzzle
 
 Go to https://typuzzler.github.io/ from a web browser on a computer. Phones and tablets are not supported; we cannot guarantee a proper experience on them.
 
-The main functionalities of TYPuzzler are listed in README.md.
+The main functionalities of TYPuzzler are listed in [README.md](/README.md).
 
 ## How to play
 - Click “Start Typing” from the home page.
