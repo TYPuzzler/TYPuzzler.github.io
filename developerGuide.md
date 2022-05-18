@@ -1,6 +1,6 @@
 # Developer Guidelines
 
-See **Repository Layout** in [README.md](README.md) for the layout of directories.
+See **Repository Layout** in [README.md](/README.md) for the layout of directories.
 
 ## How to obtain the source code
 
