@@ -37,7 +37,13 @@ Contains all the puzzle images
 ### \~/src
 Contains code related to the front end website
 
-Make sure all commands to run the frontend are run in the typuzzler directory
+### \~/test
+Tests related to frontend and JS.
+Update with test directories if necessary.
+
+### \~/tests
+Tests related to backend Python code.
+Update with test directories if necessary.
 
 ## Setup
 
@@ -51,36 +57,4 @@ To deploy on Github Pages:
 
 `npm run deploy`
 
-## Local Testing
-
-### JavaScript
-1. Add test files to ~/test
-2. Install MochaJS
-    - `npm install mocha`
-3. Run the tests
-    - `npm test`
-### Python
-1. Add test files to ~/tests
-2. Install Homebrew
-    - `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
-3. Install Python:
-    - `brew install python`
-4. Install Pillow
-    - `python -m pip install --upgrade Pillow`
-5. Install Pipenv
-    - `python -m pip install --upgrade pipenv`
-6. Install Pytest
-    - `python -m pip install pytest`
-7. Run tests with pytest
-    - `pipenv run test -v`
-## CI testing
-
-### JavaScript
-1. Add test files to ~/test
-2. Commit with tag `ci-js`
-### Python
-1. Add test files to ~/tests
-2. Commit with tag `ci-py`
-### JavaScript & Python
-1. Add JavaScript test files to ~/test and add Python test files to ~/tests
-2. Commit with tag `ci-build`
+See **How to test** in [developerGuide.MD](/developerGuide.MD) for information on testing.
