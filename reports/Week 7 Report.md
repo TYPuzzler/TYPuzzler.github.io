@@ -1,9 +1,9 @@
 # Team Report
 ## 1. Last Week's Plans / Goals
-## 2. What We Did 
-## 3. Plans / Goals
 - Continue implementing goals of our project, especially the puzzle reward use case
 - Provide comprehensive documentation
+## 2. What We Did 
+## 3. Plans / Goals
 ## 4. Meeting Agenda
 # Contributions  
 ## 1. Last Week's Plans / Goals
