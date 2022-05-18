@@ -78,5 +78,3 @@ Add new js files to `~/test`. (Should change the directory name to testFrontend)
 
 - For backend python tests:  
 Add new python files to `~/tests`. (testBackend)
-
-## How to build a release
