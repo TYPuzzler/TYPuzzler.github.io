@@ -57,4 +57,4 @@ To deploy on Github Pages:
 
 `npm run deploy`
 
-See **How to test** in [developerGuide.MD](/developerGuide.MD) for information on testing.
+See **How to test** in [developerGuide.md](/developerGuide.md) for information on testing.
