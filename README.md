@@ -47,14 +47,6 @@ Update with test directories if necessary.
 
 ## Setup
 
-`npm install`
-
-To run:
-
-`npm start`
-
-To deploy on Github Pages:
-
-`npm run deploy`
+See **How to build** in [developerGuide.md](/developerGuide.md) for information on the setup.
 
 See **How to test** in [developerGuide.md](/developerGuide.md) for information on testing.
