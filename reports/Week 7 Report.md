@@ -24,6 +24,8 @@
 ### Margaret
 - Did research on Heroku and began trying it out as an option for establishing data storage and communication between frontend and backend
 ### Bowen
+- Automatically generating data files for front end for piece selection.
+- Database server is working on local network.
 ### Chris
 - Made the puzzle progress position adapt to screen size
     - It seems that there is a cutoff to horizontal screen size where the puzzle progress position is no longer centered. This should not be a problem since the intended user is one who has a standard computer screen.
@@ -36,6 +38,8 @@
 - Keep investigating and setting up Heroku as a way to help with implementing the puzzle rewards and puzzle progress
 - Add more functionalities to the user interface and feedback to the user in the typing interface
 ### Bowen
+- Make database more accessable(if we still want to use one)
+- Look into python integration
 ### Chris
 - Implement the user progress storage using the Web Storage API with the user earning pieces in a specific order.
 - Start working on randomizing the order of puzzle pieces earned
