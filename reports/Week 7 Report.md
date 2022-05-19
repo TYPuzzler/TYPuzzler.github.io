@@ -5,7 +5,9 @@
 ## 2. What We Did 
 - Added user and developer documentation to the repository
 ## 3. Plans / Goals
+- Keep working on implementing the puzzle reward use case and puzzle progress use case, investigating different options
 ## 4. Meeting Agenda
+- Discuss how to work on implementing the main features that haven't been completed
 # Contributions  
 ## 1. Last Week's Plans / Goals
 ### Margaret
@@ -20,6 +22,7 @@
 - Help frontend team with Python to React connection
 ## 2. What We Did  
 ### Margaret
+- Did research on Heroku and began trying it out as an option for establishing data storage and communication between frontend and backend
 ### Bowen
 ### Chris
 - Made the puzzle progress position adapt to screen size
@@ -30,6 +33,8 @@
 ### Eric
 ## 3. Plans / Goals  
 ### Margaret
+- Keep investigating and setting up Heroku as a way to help with implementing the puzzle rewards and puzzle progress
+- Add more functionalities to the user interface and feedback to the user in the typing interface
 ### Bowen
 ### Chris
 - Implement the user progress storage using the Web Storage API with the user earning pieces in a specific order.
