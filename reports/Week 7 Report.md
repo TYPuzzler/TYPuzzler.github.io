@@ -33,6 +33,7 @@
     - I plan on using it as a map from puzzle name to a list of pieces that they've acquired for that puzzle, updating it whenever they earn a new one.
     - I can use JSON strings to store the list as a string and convert it back when I need to access the contents.
 ### Eric
+- Helped with some of the documentation
 ## 3. Plans / Goals  
 ### Margaret
 - Keep investigating and setting up Heroku as a way to help with implementing the puzzle rewards and puzzle progress
@@ -44,3 +45,4 @@
 - Implement the user progress storage using the Web Storage API with the user earning pieces in a specific order.
 - Start working on randomizing the order of puzzle pieces earned
 ### Eric
+- Before peer review, add any remaining planned frontend ui elements if health permits 
