@@ -7,7 +7,7 @@
 ## 3. Plans / Goals
 - Keep working on implementing the puzzle reward use case and puzzle progress use case, investigating different options
 ## 4. Meeting Agenda
-- Discuss how to work on implementing the main features that haven't been completed
+- Discuss how to work on implementing the main features that haven't been completed (puzzle rewards, puzzle progress, multiple puzzles available)
 # Contributions  
 ## 1. Last Week's Plans / Goals
 ### Margaret
