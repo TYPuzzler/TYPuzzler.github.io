@@ -16,6 +16,7 @@
 /.pytest_cache
 /src/puzzle/main.py
 /.env
+/flask
 # misc
 .DS_Store
 .env.local
