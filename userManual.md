@@ -23,3 +23,4 @@ Please go to https://github.com/TYPuzzler/TYPuzzler.github.io/issues, click “N
 
 - The puzzle progress showcase may not be centered on small screen/small browser window.
 - The puzzle piece rewards don’t work properly. The same puzzle piece will be displayed every time.
+- The website breaks if you refresh the page.
