@@ -22,9 +22,12 @@
 ### Margaret
 ### Bowen
 ### Chris
+- Started translating some of the python functionality into JavaScript in parallel with Bowen setting up a Python server in case setting up a Python server didn't work out in time.
+    - The python server ended up working so we will be using that instead.
 ### Eric
 ## 3. Plans / Goals  
 ### Margaret
 ### Bowen
 ### Chris
+- Finish integrating the Python server so that the puzzle reward functionality is complete final release.
 ### Eric
