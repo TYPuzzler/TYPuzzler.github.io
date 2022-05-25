@@ -4,6 +4,7 @@
 ## 2. What We Did 
 ## 3. Plans / Goals
 ## 4. Meeting Agenda
+- Discuss feedback received from peer reviews.
 # Contributions  
 ## 1. Last Week's Plans / Goals
 ### Margaret
