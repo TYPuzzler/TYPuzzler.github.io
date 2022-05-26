@@ -77,4 +77,4 @@ pipenv run test -v
 Add new js files to `~/test`. (Should change the directory name to testFrontend)
 
 - For backend python tests:  
-Add new python files to `~/tests`. (testBackend)
+Add new python files to `~/test`. (testBackend)
