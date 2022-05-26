@@ -5,7 +5,7 @@ TYPuzzler is a typing practice application developed by Chris Choi, Margaret Li,
 ## Product Description
 Our product is a web browser app to practice typing. It will allow users to complete typing exercises, and earn pieces of a puzzle as they go. Users will be able to view and download the whole picture when they finish a puzzle. It is publicly accessible at https://typuzzler.github.io/.
 
-See [userManual.md](/userManual.md) for instructions on how to use TYPuzzler. If you would like to contribute to the project, please read the instructions in the [Developer Guide](https://github.com/TYPuzzler/TYPuzzler.github.io/wiki/Developer-Guide).
+See [userManual.md](/userManual.md) for instructions on how to use TYPuzzler. If you would like to contribute to the project, please read the instructions in the [developer guide](https://github.com/TYPuzzler/TYPuzzler.github.io/wiki/Developer-Guide).
 
 ## App Goals/Functionalities
 
@@ -47,6 +47,6 @@ Update with test directories if necessary.
 
 ## Setup
 
-See **How to build** in [developerGuide.md](/developerGuide.md) for information on the setup.
+See [**How to build**](https://github.com/TYPuzzler/TYPuzzler.github.io/wiki/Developer-Guide#how-to-build) in the developer guide for information on the setup.
 
-See **How to test** in [developerGuide.md](/developerGuide.md) for information on testing.
+See [**How to test**](https://github.com/TYPuzzler/TYPuzzler.github.io/wiki/Developer-Guide#how-to-test) in the developer guide for information on testing.
