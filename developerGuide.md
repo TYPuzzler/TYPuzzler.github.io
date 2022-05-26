@@ -38,7 +38,7 @@ npm test
    1. Add test files to ~/test
    2. Commit with tag `ci-js`
 ### Python
-Run commands in a terminal from project root directory.
+Run commands in a linux terminal from project root directory.
 1. Add test files to `~/tests`
 2. Install Homebrew:
 ```
