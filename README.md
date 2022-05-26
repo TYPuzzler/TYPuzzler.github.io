@@ -1,6 +1,6 @@
 # TYPuzzler
 
-TYPuzzler is a typing practice application developed by Chris Choi, Margaret Li, Bowen Tian and Eric Yoon. Practice typing while collecting pieces to solve a puzzle. We hope this makes learning to type enjoyable and exciting!
+TYPuzzler is a typing game developed by Chris Choi, Margaret Li, Bowen Tian and Eric Yoon. Practice typing while collecting pieces to solve a puzzle. We hope this makes learning to type enjoyable and exciting!
 
 ## Product Description
 Our product is a web browser app to practice typing. It will allow users to complete typing exercises, and earn pieces of a puzzle as they go. Users will be able to view and download the whole picture when they finish a puzzle. It is publicly accessible at https://typuzzler.github.io/.
