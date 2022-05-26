@@ -1,8 +1,10 @@
 # Team Report
 ## 1. Last Week's Plans / Goals
 - Keep working on implementing the puzzle reward use case and puzzle progress use case, investigating different options
-## 2. What We Did 
+## 2. What We Did
+- Backend Python server and database implemented.
 ## 3. Plans / Goals
+- Integrate backend with front end.
 ## 4. Meeting Agenda
 - Discuss feedback received from peer reviews.
 # Contributions  
@@ -21,6 +23,8 @@
 ## 2. What We Did  
 ### Margaret
 ### Bowen
+- Set up python server with pythonanywhere.com using Flask API.
+- Set up MySQL database server for the python server.
 ### Chris
 - Started translating some of the python functionality into JavaScript in parallel with Bowen setting up a Python server in case setting up a Python server didn't work out in time.
     - The python server ended up working so we will be using that instead.
@@ -28,6 +32,7 @@
 ## 3. Plans / Goals  
 ### Margaret
 ### Bowen
+- Modify existing code to reflect server/database integration
 ### Chris
 - Finish integrating the Python server so that the puzzle reward functionality is complete final release.
 ### Eric
