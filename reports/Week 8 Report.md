@@ -22,6 +22,7 @@
 - Before peer review, add any remaining planned frontend ui elements if health permits 
 ## 2. What We Did  
 ### Margaret
+- Investigated Heroku more, but will be abandoning it because pythonanywhere server worked
 ### Bowen
 - Set up python server with pythonanywhere.com using Flask API.
 - Set up MySQL database server for the python server.
@@ -31,6 +32,7 @@
 ### Eric
 ## 3. Plans / Goals  
 ### Margaret
+- Finish puzzle reward and puzzle progress functionality
 ### Bowen
 - Modify existing code to reflect server/database integration
 ### Chris
