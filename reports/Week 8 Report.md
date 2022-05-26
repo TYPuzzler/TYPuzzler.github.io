@@ -40,4 +40,4 @@
 ### Chris
 - Finish integrating the Python server so that the puzzle reward functionality is complete final release.
 ### Eric
-- 
+- Help frontend team with wrapping up puzzle functions
