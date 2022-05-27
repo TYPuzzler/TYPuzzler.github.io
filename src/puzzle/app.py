@@ -1,8 +1,11 @@
 import json
+import random
 import mysql.connector
 from flask import Flask, jsonify
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app, resources={r"/*": {"origins": "*"}})
 
 config = {
     'user': 'TYPuzzler',
@@ -16,69 +19,64 @@ config = {
 def index():
     return 'This is the backend server for TYPuzzler created by Bowen Tian.'
 
-@app.route('/test/<string:nameOfPuzzle>', methods=['GET', 'POST'])
+@app.route('/test/<string:nameOfPuzzle>', methods=['GET'])
 def test(nameOfPuzzle):
     cnx = mysql.connector.connect(**config)
     cursor = cnx.cursor()
     name = json.loads(nameOfPuzzle)
     query = 'SELECT piece_num, url, rarity, x, y FROM ' + name
     cursor.execute(query)
-    dict = {}
+    dic = {}
     for num, url, rarity, x, y in cursor:
-        dict[num] = (url, rarity, x, y)
-    return jsonify(dict)
+        dic[num] = (url, rarity, x, y)
 
-# @app.route('/test')
-# def test():
-#     cnx = mysql.connector.connect(**config)
-#     cursor = cnx.cursor()
-#     name = 'JS_logo'
-#     query = 'SELECT piece_num, url, rarity, x, y FROM ' + name
-#     cursor.execute(query)
-#     dict = {}
-#     for num, url, rarity, x, y in cursor:
-#         dict[num] = (url, rarity, x, y)
-#         # print(num + '\n')
-#     return jsonify(dict)
+    cursor.close()
+    cnx.close()
+    return jsonify(dic)
 
-# Given the name of a puzzle, returns the URL to a undiscovered piece of that puzzle
-# or a message that says "No piece left". Uses a text log to keep track of which
-# pieces are obtained.
-# def roll(nameOfPuzzle, TEST=False):
-#     meta = open('images/' + nameOfPuzzle + '/metadata.txt', 'r')
-#     ml = meta.readlines()
-#     meta.close()
-#     with open('images/' + nameOfPuzzle + '/obtained.txt', 'r') as obt:
-#         ols = []
-#         ols = obt.readlines()
-#     if len(ols) == int(ml[2]):
-#         return 'No piece left'
+@app.route('/full/<string:nameOfPuzzle>', methods=['GET'])
+def get_full_puzzle(nameOfPuzzle):
+    cnx = mysql.connector.connect(**config)
+    cursor = cnx.cursor()
+    name = json.loads(nameOfPuzzle)
+    query = 'SELECT puzzle_url, x, y FROM puzzles where puzzle_name="' + name + '"'
+    cursor.execute(query)
+    result = cursor.fetchall()
+    cursor.close()
+    cnx.close()
+    return jsonify(result[0])
 
-#     ol = [int(n) for n in ols]
-#     n = random.randint(1, int(ml[2]))
-#     while n in ol:
-#         n = random.randint(1, int(ml[2]))
-#     with open('images/' + nameOfPuzzle + '/obtained.txt', 'a') as obt:
-#         obt.write(str(n)+'\n')
-#     url = 'https://github.com/TYPuzzler/TYPuzzler.github.io/blob/main/images/'\
-#         + nameOfPuzzle + '/' + nameOfPuzzle + '_piece_' + str(n)\
-#         + '.png?raw=true'
-#     return url
+@app.route('/gray/<string:nameOfPuzzle>', methods=['GET'])
+def get_gray_puzzle(nameOfPuzzle):
+    cnx = mysql.connector.connect(**config)
+    cursor = cnx.cursor()
+    name = json.loads(nameOfPuzzle)
+    query = 'SELECT gray_url, x, y FROM puzzles where puzzle_name="' + name + '"'
+    cursor.execute(query)
+    result = cursor.fetchall()
+    cursor.close()
+    cnx.close()
+    return jsonify(result[0])
 
-# def demo_roll(nameOfPuzzle):
-#     metaURL = 'https://github.com/TYPuzzler/TYPuzzler.github.io/blob/main/images/' + nameOfPuzzle + '/metadata.txt?raw=true'
-#     meta = urllib.request.urlopen(metaURL)
-    
-#     ml = meta.readlines()
+@app.route('/random/<string:nameOfPuzzle>', methods=['GET'])
+def random_piece(nameOfPuzzle):
+    cnx = mysql.connector.connect(**config)
+    cursor = cnx.cursor()
+    name = json.loads(nameOfPuzzle)
+    n = random.random()
+    rarity = ''
+    if n < 0.55:
+        rarity = 'N'
+    elif n < 0.8:
+        rarity = 'R'
+    elif n < 0.95:
+        rarity = 'SR'
+    else:
+        rarity = 'SSR'
 
-#     n = random.randint(1, int(ml[2]))
-    
-#     url = 'https://github.com/TYPuzzler/TYPuzzler.github.io/blob/main/images/'\
-#         + nameOfPuzzle + '/' + nameOfPuzzle + '_piece_' + str(n)\
-#         + '.png?raw=true'
-#     with open('url.json', 'w', encoding='utf-8') as f:
-#         json.dump(url, f, ensure_ascii=False, indent=4)
-
-#     return json.dumps(url)
-
-# demo_roll('JS_logo')
+    query = 'SELECT url, rarity, x, y FROM ' + name + ' where rarity="' + rarity + '" ORDER BY RAND() LIMIT 1'
+    cursor.execute(query)
+    result = cursor.fetchall()
+    cursor.close()
+    cnx.close()
+    return jsonify(result[0])
