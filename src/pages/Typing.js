@@ -3,11 +3,14 @@ import useKeyPress from '../hooks/useKeypress';
 import { Link } from "react-router-dom";
 import { generate } from '../utils/words'
 import React, { useCallback, useState } from 'react';
+import { draw } from '../utils/drawPuzzle';
 
 /**
  * This represents the page that is presented to the user when they start a typing session.
  */
 function Typing() {
+  var level = parseInt(localStorage.getItem("level")) || 0;
+
   // The substring of the sample text that has been correctly typed
   const [correctChars, setCorrectChars] = useState('');
 
@@ -66,9 +69,11 @@ function Typing() {
         setIncomingChars(incomingChars.substring(1));
         if (incomingChars.length == 0) {
           // User is done typing, so let's calculate the user's WPM and Accuracy
+
           var duration = ((new Date().getTime()) - startTime) / 60000.0; // convert to minutes
           setWpm("WPM: " + ((correctChars.length / 5) / duration).toFixed(2)); 
           setAccuracy("ACC: " + ((correctChars.length * 100) / typed.length).toFixed(2) + "%")
+          localStorage.setItem("level", (level + 1));
         }
       }
     });
