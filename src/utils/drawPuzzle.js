@@ -31,7 +31,6 @@ export const draw = async (level = 1) => {
 
     // Add the pieces earned on top of the gray scale background
     pieces = await metaData(puzzleName);
-    //console.log(pieces[1])
     for (var i = 1; i <= pieceCount; i++) {
         result.push(<img src={pieces[i][0]} style={{position : 'absolute',
             left : pieces[i][2] + "px",
@@ -46,6 +45,11 @@ export const draw = async (level = 1) => {
     )
 };
 
+/**
+ * Returns the metadata of the puzzle pieces of a puzzle
+ * @param {string} puzzleName the name of the puzzle
+ * @returns JSON metadata of the puzzle pieces
+ */
 export const metaData = async (puzzleName = "JS_logo") => {
     var url = "https://typuzzler.pythonanywhere.com/test/\"" + puzzleName + "\"";
     var result;
@@ -58,6 +62,11 @@ export const metaData = async (puzzleName = "JS_logo") => {
     return result;
 }
 
+/**
+ * Returns the grayscale version of a puzzle to be used as the backgroudn of the reward screen
+ * @param {string} puzzleName the name of the puzzle
+ * @returns Json of metadata of the grayscale version of the puzzle
+ */
 export const getGray = async (puzzleName = "JS_logo") => {
     var url = "https://typuzzler.pythonanywhere.com/gray/\"" + puzzleName + "\"";
     var result;

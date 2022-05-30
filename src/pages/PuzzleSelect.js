@@ -11,7 +11,7 @@ function PuzzleSelect() {
   } else if (level <= 108 + 25) {
     piece = "https://github.com/TYPuzzler/TYPuzzler.github.io/blob/main/images/husky_logo/husky_logo_piece_"+ (level - 25) +".png?raw=true"
   } else if (level <= 108 + 108 + 25) {
-    piece = "https://github.com/TYPuzzler/TYPuzzler.github.io/blob/main/images/husky_logo/husky_logo_piece_"+ (level - 25 - 108) +".png?raw=true"
+    piece = "https://github.com/TYPuzzler/TYPuzzler.github.io/blob/main/images/python_logo/python_logo_piece_"+ (level - 25 - 108) +".png?raw=true"
   }
 
   return (
