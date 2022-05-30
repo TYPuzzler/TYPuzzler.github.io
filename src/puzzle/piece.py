@@ -64,3 +64,8 @@ class PuzzlePiece:
         with urllib.request.urlopen(self.src) as url:
             f = io.BytesIO(url.read())
         return Image.open(f).crop(self.coords).convert('LA')
+
+    def trans(self):
+        with urllib.request.urlopen(self.src) as url:
+            f = io.BytesIO(url.read())
+        return Image.open(f).crop(self.coords).putalpha(128)

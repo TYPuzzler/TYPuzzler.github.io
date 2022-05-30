@@ -141,6 +141,20 @@ class Puzzle:
         for i in range(start - 1, end, step):
             self.pieces[i].grey().save(path)
 
+    def saveTransPieces(self, path=None, start=1, end=None, step=1):
+        if end is None:
+            end = len(self.pieces)
+        if start < 1:
+            msg = 'Starting point is puzzle piece #1.'
+            raise NoSuchPieceException(msg)
+        if end > len(self.pieces):
+            msg = 'The last piece is #' + str(len(self.pieces)) + \
+                  ', there\'s no piece #' + str(end) + '.'
+            raise NoSuchPieceException(msg)
+
+        for i in range(start - 1, end, step):
+            self.pieces[i].grey().save(path)
+
     # Saves the puzzle as a PNG in the given path.
     # path: must be an existing directory, if not given,
     #   default will be the same directory as the image.
