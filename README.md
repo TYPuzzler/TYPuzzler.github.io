@@ -28,14 +28,14 @@ Contains the code related to the backend puzzle processing mechanism
 ### \~/src/utils
 Contains the backend for text sample generation
 
+### \~/src
+Contains code related to the front end website
+
 ### \~/public
 Contains the public webpage files
 
 ### \~/images
 Contains all the puzzle images
-
-### \~/src
-Contains code related to the front end website
 
 ### \~/test
 Tests related to the application
