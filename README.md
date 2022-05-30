@@ -15,11 +15,11 @@ See the [user manual](https://github.com/TYPuzzler/TYPuzzler.github.io/wiki/User
 
 * During a typing exercise, only advance if the user enters the right current character
 
-* (Work in progress) Reward the user with a puzzle piece when an exercise is finished
+* Reward the user with a puzzle piece when an exercise is finished
 
-* (Work in progress) Show the completed puzzle when all pieces have been obtained, then allow the user to download the full image
+* Show the completed puzzle when all pieces have been obtained, then allow the user to download the full image
 
-* (Work in progress) Provide multiple puzzles for the user to solve
+* Provide multiple puzzles for the user to solve
 
 ## Repository Layout
 ### \~/src/puzzle
