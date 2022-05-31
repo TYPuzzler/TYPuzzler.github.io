@@ -6,7 +6,11 @@ const puzzles = {
   3 : "python_logo"
 }
 
-function PuzzleSelect() {
+
+/**
+ * This represents the page that rewards the user with a puzzle piece after a typing exercise.
+ */
+function PuzzleReward() {
   var level = localStorage.getItem("level") ?? 1;
   var piece;
   var text;
@@ -32,7 +36,7 @@ function PuzzleSelect() {
       <br/>
       <img src={piece}></img>
       <br/>
-      <Link to="/puzzle">
+      <Link to="/puzzleprogress">
         <button variant="outlined">
           Next
         </button>
@@ -41,4 +45,4 @@ function PuzzleSelect() {
   );
 }
 
-export default PuzzleSelect;
+export default PuzzleReward;

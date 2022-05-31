@@ -85,8 +85,11 @@ function Typing() {
         setStartTime(new Date().getTime());
       }
 
+      // Validate typed character against text sample and update state if correct
       if (key == currentChar) {
-        // Validate typed character against text sample and update state if correct
+        // change background color of current character back to normal color
+        document.getElementById("curr").style.backgroundColor = "#d1a428";
+
         setCorrectChars(correctChars + currentChar);
         setCurrentChar(incomingChars.charAt(0));
         setIncomingChars(incomingChars.substring(1));
@@ -106,6 +109,9 @@ function Typing() {
           Next
         </button>]);
         }
+      } else {
+        // change background color of current color to red to indicate wrong character was entered
+        document.getElementById("curr").style.backgroundColor = "#e0503a";
       }
     });
   }
@@ -117,7 +123,7 @@ function Typing() {
         <span className="Character-correct">
           {correctChars}
         </span>
-        <span className="Character-current">
+        <span id="curr" className="Character-current">
           {currentChar}
         </span>
         <span>
@@ -131,8 +137,8 @@ function Typing() {
         {accuracy}
       </p>
       <KeyPress></KeyPress>
-      <Link to="/puzzleSelect">
-        {nextButton}
+      <Link to="/puzzlereward">
+      {nextButton}
       </Link>
     </div>
   );

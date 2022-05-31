@@ -3,7 +3,10 @@ import { Link } from "react-router-dom";
 import React, { useCallback, useState } from 'react';
 import { draw } from "../utils/drawPuzzle";
 
-function PuzzleInventory() {
+/**
+ * This represents the page that presents the user's progress on the current puzzle.
+ */
+function PuzzleProgress() {
   const puzzles = {
     1 : "JS_logo",
     2 : "husky_logo",
@@ -13,7 +16,7 @@ function PuzzleInventory() {
     1 : 25,
     2 : 108,
     3 : 108
-}
+  }
 
   var level = JSON.parse(localStorage.getItem("level")) || 0;
   var puzzleName;
@@ -27,7 +30,6 @@ function PuzzleInventory() {
   console.log(earnedPieces);
 
   var [text, setText] = useState('Here\'s your puzzle progress so far. Keep it up!');
-
   var [reward, setReward] = useState(['']);
 
   const fetchData = useCallback(async () => {
@@ -59,4 +61,4 @@ function PuzzleInventory() {
   );
 }
 
-export default PuzzleInventory;
+export default PuzzleProgress;
