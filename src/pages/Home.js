@@ -24,12 +24,17 @@ function Home() {
   );
 }
 
-function clear () {
-  localStorage.removeItem("level");
-  localStorage.removeItem("last_earned");
-  for (var i = 1; i <= 3; i++) {
-    localStorage.removeItem(puzzles[i]);
+// Clears puzzle progress if user confirms
+function clear() {
+  var answer = window.confirm("Are you sure you want to clear your data? This will delete all your progress!");
+  if (answer) {
+    localStorage.removeItem("level");
+    localStorage.removeItem("last_earned");
+    for (var i = 1; i <= 3; i++) {
+      localStorage.removeItem(puzzles[i]);
+    }
   }
 }
+
 
 export default Home;
