@@ -26,7 +26,9 @@ export const draw = async (level = 1) => {
         height: gray[2],
         marginLeft: 'auto',
         marginRight: 'auto',
-        "background-color": 'black'
+        "borderStyle": 'solid',
+        "border-width": '3px',
+        "border-color": '#000000'
       };
     result.push(<img style={{position : 'absolute', top :'0px', left: '0px'}}></img>);
 
