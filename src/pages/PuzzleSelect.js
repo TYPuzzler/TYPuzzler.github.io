@@ -2,8 +2,15 @@ import '../App.css';
 import { Link } from "react-router-dom";
 
 function PuzzleSelect() {
-  var level = localStorage.getItem("level") || 0;
+  var level = localStorage.getItem("level") ?? 0;
   var piece;
+  var text;
+  if (level < 1) {
+    text = "Please complete an exercise before earning a puzzle piece.";
+  } else {
+    text = "Great job! You got a puzzle piece.";
+  }
+
   if (level == 0) {
     piece = "";
   } else if (level <= 25) {
@@ -16,7 +23,7 @@ function PuzzleSelect() {
 
   return (
     <div className="App">
-      <p>Great job! You got a puzzle piece.</p>
+      <p>{text}</p>
       <br/>
       <img src={piece}></img>
       <br/>

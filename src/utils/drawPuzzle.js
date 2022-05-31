@@ -25,16 +25,19 @@ export const draw = async (level = 1) => {
         width: gray[1], 
         height: gray[2],
         marginLeft: 'auto',
-        marginRight: 'auto'
+        marginRight: 'auto',
+        "background-color": 'black'
       };
-    result.push(<img src={gray[0]} style={{position : 'absolute', top :'0px', left: '0px'}}></img>);
+    result.push(<img style={{position : 'absolute', top :'0px', left: '0px'}}></img>);
 
     // Add the pieces earned on top of the gray scale background
-    pieces = await metaData(puzzleName);
-    for (var i = 1; i <= pieceCount; i++) {
-        result.push(<img src={pieces[i][0]} style={{position : 'absolute',
-            left : pieces[i][2] + "px",
-            top : pieces[i][3] + "px"}}></img>);
+    if (level > 0) {
+        pieces = await metaData(puzzleName);
+        for (var i = 1; i <= pieceCount; i++) {
+            result.push(<img src={pieces[i][0]} style={{position : 'absolute',
+                left : pieces[i][2] + "px",
+                top : pieces[i][3] + "px"}}></img>);
+        }
     }
     
     console.log(result)
