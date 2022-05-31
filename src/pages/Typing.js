@@ -3,13 +3,32 @@ import useKeyPress from '../hooks/useKeypress';
 import { Link } from "react-router-dom";
 import { generate } from '../utils/words'
 import React, { useCallback, useState } from 'react';
-import { draw } from '../utils/drawPuzzle';
+import { randomPiece } from '../utils/randomPiece';
 
 /**
  * This represents the page that is presented to the user when they start a typing session.
  */
 function Typing() {
-  var level = parseInt(localStorage.getItem("level")) || 0;
+  var level = parseInt(localStorage.getItem("level")) || 1;
+  var puzzleName;
+  if (level == 1) {
+    puzzleName = "JS_logo";
+  } else if (level == 2) {
+    puzzleName = "husky_logo";
+  } else {
+    puzzleName = "python_logo";
+  }
+
+  const pieceCounts = {
+    1 : 25,
+    2 : 108,
+    3 : 108
+}
+
+
+  var earnedPieces = JSON.parse(localStorage.getItem(puzzleName)) ?? Array(109).fill(0);
+
+  const [reward, setReward] = useState([]);
 
   // The substring of the sample text that has been correctly typed
   const [correctChars, setCorrectChars] = useState('');
@@ -34,14 +53,18 @@ function Typing() {
   // The characters that the user has typed
   const[typed, setTyped] = useState('');
 
+  const[nextButton, setNextButton] = useState([]);
+
 
   const fetchData = useCallback(async () => {
     // Get text sample from generator
-    const data = await generate()
+    const text = await generate(50);
+    const rand = await randomPiece(puzzleName);
+    setReward(rand);
 
     // set state with the result
-    setCurrentChar(data.charAt(0));
-    setIncomingChars(data.substring(1));
+    setCurrentChar(text.charAt(0));
+    setIncomingChars(text.substring(1));
   });
 
   React.useEffect(() => {
@@ -69,11 +92,19 @@ function Typing() {
         setIncomingChars(incomingChars.substring(1));
         if (incomingChars.length == 0) {
           // User is done typing, so let's calculate the user's WPM and Accuracy
-
           var duration = ((new Date().getTime()) - startTime) / 60000.0; // convert to minutes
           setWpm("WPM: " + ((correctChars.length / 5) / duration).toFixed(2)); 
           setAccuracy("ACC: " + ((correctChars.length * 100) / typed.length).toFixed(2) + "%")
-          localStorage.setItem("level", (level + 1));
+
+          
+          earnedPieces[0] = earnedPieces[0] + 1;
+          earnedPieces[reward[0]] = 1;
+          localStorage.setItem("level", JSON.stringify(level));
+          localStorage.setItem("last_earned", JSON.stringify(reward));
+          localStorage.setItem(puzzleName, JSON.stringify(earnedPieces));
+          setNextButton([<button variant="outlined">
+          Next
+        </button>]);
         }
       }
     });
@@ -101,9 +132,7 @@ function Typing() {
       </p>
       <KeyPress></KeyPress>
       <Link to="/puzzleSelect">
-        <button variant="outlined">
-          Next
-        </button>
+        {nextButton}
       </Link>
     </div>
   );
