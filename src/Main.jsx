@@ -2,8 +2,8 @@ import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 
 import Home from './pages/Home';
-import PuzzleInventory from './pages/PuzzleInventory';
-import PuzzleSelect from './pages/PuzzleSelect';
+import PuzzleReward from './pages/PuzzleReward';
+import PuzzleProgress from './pages/PuzzleProgress';
 import Typing from './pages/Typing';
 
 function Main() {
@@ -11,8 +11,8 @@ function Main() {
     <Routes>
       <Route path='/' element={<Home />} />
       <Route path='/typing' element={<Typing />} />
-      <Route path='/puzzleselect' element={<PuzzleSelect />} />
-      <Route path='/puzzle' element={<PuzzleInventory />} />
+      <Route path='/puzzleprogress' element={<PuzzleProgress />} />
+      <Route path='/puzzlereward' element={<PuzzleReward />} />
     </Routes>
   );
 }

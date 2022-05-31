@@ -3,7 +3,10 @@ import { Link } from "react-router-dom";
 import React, { useCallback, useState } from 'react';
 import { draw } from "../utils/drawPuzzle";
 
-function PuzzleInventory() {
+/**
+ * This represents the page that presents the user's progress on the current puzzle.
+ */
+function PuzzleProgress() {
   var level = localStorage.getItem("level") || 0;
   var [reward, setReward] = useState(['']);
   const fetchData = useCallback(async () => {
@@ -28,4 +31,4 @@ function PuzzleInventory() {
   );
 }
 
-export default PuzzleInventory;
+export default PuzzleProgress;
