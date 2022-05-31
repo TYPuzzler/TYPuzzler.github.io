@@ -56,7 +56,7 @@ export const draw = async (level = 1) => {
  * @returns JSON metadata of the puzzle pieces
  */
 export const metaData = async (puzzleName = "JS_logo") => {
-    var url = "https://typuzzler.pythonanywhere.com/test/\"" + puzzleName + "\"";
+    var url = "https://typuzzler.pythonanywhere.com/meta/\"" + puzzleName + "\"";
     var result;
     await fetch(url)
         .then(response => response.json())
