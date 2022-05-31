@@ -99,9 +99,10 @@ function Typing() {
           setWpm("WPM: " + ((correctChars.length / 5) / duration).toFixed(2)); 
           setAccuracy("ACC: " + ((correctChars.length * 100) / typed.length).toFixed(2) + "%")
 
-          
+          if (earnedPieces[reward[0]] == 0) {
           earnedPieces[0] = earnedPieces[0] + 1;
           earnedPieces[reward[0]] = 1;
+          }
           localStorage.setItem("level", JSON.stringify(level));
           localStorage.setItem("last_earned", JSON.stringify(reward));
           localStorage.setItem(puzzleName, JSON.stringify(earnedPieces));
