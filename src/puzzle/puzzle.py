@@ -153,7 +153,7 @@ class Puzzle:
             raise NoSuchPieceException(msg)
 
         for i in range(start - 1, end, step):
-            self.pieces[i].grey().save(path)
+            self.pieces[i].saveTrans()
 
     # Saves the puzzle as a PNG in the given path.
     # path: must be an existing directory, if not given,

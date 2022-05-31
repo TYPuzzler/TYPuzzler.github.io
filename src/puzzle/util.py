@@ -60,6 +60,22 @@ def write_sql_inserts(nameOfPuzzle):
 	f.writelines('\n'.join(lines))
 	f.close()
 
+def write_sql_inserts_for_trans(nameOfPuzzle):
+	meta = open('../../images/' + nameOfPuzzle + '/metadata.txt', 'r')
+	ml = meta.readlines()
+	meta.close()
+	f = open('sql.txt', 'w')
+	lines = []
+	for i in range(4, len(ml), 4):
+		num = ml[i].splitlines()[0]
+		rarity = str(ml[i + 2]).splitlines()[0]
+		x = str(ml[i + 1]).splitlines()[0].split(',')[0]
+		y = str(ml[i + 1]).splitlines()[0].split(',')[1]
+		line = 'insert into ' + nameOfPuzzle + ' values(' + num + ', \'https://raw.githubusercontent.com/TYPuzzler/TYPuzzler.github.io/main/images/' + nameOfPuzzle + '/' + nameOfPuzzle + '_piece_' + num + '.png\', \'' + rarity + '\', ' + x + ', ' + y + ');'
+		lines.append(line)
+	f.writelines('\n'.join(lines))
+	f.close()
+
 
 
 

@@ -1,6 +1,8 @@
 from PIL import Image
 import io
+import numpy as np
 import urllib.request
+import math
 
 # This class is an abstract representation of a piece of puzzle
 # taken out of a certain puzzle.
@@ -65,7 +67,14 @@ class PuzzlePiece:
             f = io.BytesIO(url.read())
         return Image.open(f).crop(self.coords).convert('LA')
 
-    def trans(self):
+    def saveTrans(self):
         with urllib.request.urlopen(self.src) as url:
             f = io.BytesIO(url.read())
-        return Image.open(f).crop(self.coords).putalpha(128)
+        img = Image.open(f).crop(self.coords)
+        array = np.array(img)
+        for line in array:
+            for pix in line:
+                pix[3] = math.ceil(pix[3] / 2)
+        img = Image.fromarray(array)
+        path = '../../images/' + self.name + '/trans_piece_' + str(self.num) + '.png'
+        img.save(path)
