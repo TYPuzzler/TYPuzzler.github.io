@@ -100,7 +100,7 @@ function Typing() {
         {accuracy}
       </p>
       <KeyPress></KeyPress>
-      <Link to="/puzzleSelect">
+      <Link to="/puzzlereward">
         <button variant="outlined">
           Next
         </button>
