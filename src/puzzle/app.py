@@ -19,7 +19,7 @@ config = {
 def index():
     return 'This is the backend server for TYPuzzler created by Bowen Tian.'
 
-@app.route('/test/<string:nameOfPuzzle>', methods=['GET'])
+@app.route('/meta/<string:nameOfPuzzle>', methods=['GET'])
 def test(nameOfPuzzle):
     cnx = mysql.connector.connect(**config)
     cursor = cnx.cursor()
@@ -74,9 +74,23 @@ def random_piece(nameOfPuzzle):
     else:
         rarity = 'SSR'
 
-    query = 'SELECT url, rarity, x, y FROM ' + name + ' where rarity="' + rarity + '" ORDER BY RAND() LIMIT 1'
+    query = 'SELECT piece_num, url, rarity, x, y FROM ' + name + ' where rarity="' + rarity + '" ORDER BY RAND() LIMIT 1'
     cursor.execute(query)
     result = cursor.fetchall()
     cursor.close()
     cnx.close()
     return jsonify(result[0])
+
+@app.route('/trans/<string:nameOfPuzzle>', methods=['GET'])
+def trans_piece(nameOfPuzzle):
+    cnx = mysql.connector.connect(**config)
+    cursor = cnx.cursor()
+    name = json.loads(nameOfPuzzle)
+    query = 'SELECT piece_num, trans_url, x, y FROM ' + name
+    cursor.execute(query)
+    dic = {}
+    for num, url, x, y in cursor:
+        dic[num] = (url, x, y)
+    cursor.close()
+    cnx.close()
+    return jsonify(dic)

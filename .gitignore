@@ -15,6 +15,7 @@
 /tests/.pytest_cache
 /.pytest_cache
 /src/puzzle/main.py
+/src/puzzle/sql.txt
 /.env
 /flask
 # misc
