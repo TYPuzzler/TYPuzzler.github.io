@@ -13,13 +13,13 @@ See the [user manual](https://github.com/TYPuzzler/TYPuzzler.github.io/wiki/User
 
 * Track and report user’s typing accuracy and speed at the end of a typing exercise
 
-* During a typing exercise, only advance if the user enters the right current character
+* During a typing exercise, only advance if the user enters the right current character. Indicate when the wrong character is entered by turning the current character highlight red
 
 * Reward the user with a puzzle piece when an exercise is finished
 
 * Show the completed puzzle when all pieces have been obtained, then allow the user to download the full image
 
-* Provide multiple puzzles for the user to solve
+* Provide three puzzles for the user to solve, of increasing challenge in the length of the typing exercises and the number of puzzle pieces to complete a puzzle
 
 ## Repository Layout
 ### \~/src/puzzle
