@@ -86,3 +86,9 @@ button {
   border-color: #50117a;
   text-align: left;
 }
+
+.Puzzle-piece {
+  border-style: solid;
+  border-width: 3px;
+  border-color: #000000;
+}

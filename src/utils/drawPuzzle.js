@@ -39,9 +39,9 @@ export const draw = async (level = 1, earnedPieces = Array(109).fill(0), last_ea
         height: gray[2],
         marginLeft: 'auto',
         marginRight: 'auto',
-        "borderStyle": 'solid',
-        "border-width": '3px',
-        "border-color": '#000000'
+        "border-style": 'outset',
+        "border-width": '5px',
+        "border-color": '#ad860e'
     };
 
     // Add the pieces earned on top of the gray scale background
@@ -57,7 +57,7 @@ export const draw = async (level = 1, earnedPieces = Array(109).fill(0), last_ea
         for (var i = 1; i <= pieceCounts[level]; i++) {
             if (last_earned[0] == i) { {
                 // TODO: draw last earned piece normally
-                result.push(<img src={last_earned[1]} style={{position : 'absolute',
+                result.push(<img className="Puzzle-piece" src={last_earned[1]} style={{position : 'absolute',
                     left : last_earned[3] + "px",
                     top : last_earned[4] + "px"}}></img>);
             }

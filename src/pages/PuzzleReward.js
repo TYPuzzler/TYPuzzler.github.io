@@ -34,7 +34,7 @@ function PuzzleReward() {
     <div className="App">
       <p>{text}</p>
       <br/>
-      <img src={piece}></img>
+      <img className="Puzzle-piece" src={piece}></img>
       <br/>
       <Link to="/puzzleprogress">
         <button variant="outlined">
