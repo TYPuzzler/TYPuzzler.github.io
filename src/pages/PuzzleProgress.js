@@ -56,6 +56,11 @@ function PuzzleProgress() {
   return (
     <div className="App">
       <p>{text}</p>
+      <Link to="/typing">
+        <button variant="outlined">
+          Type more
+        </button>
+      </Link>
       {reward}
     </div>
   );
