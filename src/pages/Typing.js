@@ -79,8 +79,16 @@ function Typing() {
     const p = await getPiece(puzzleName, order[round]);
     setReward(p);
 
+    var length;
+    if (level == 1) {
+      length = 50;
+    } else if (level == 2) {
+      length = 100;
+    } else if (level >= 3) {
+      length = 200;
+    }
     // Get text sample from generator
-    const text = await generate(50);
+    const text = await generate(length);
 
     // set state with the result
     setCurrentChar(text.charAt(0));
