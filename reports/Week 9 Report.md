@@ -24,6 +24,10 @@
 - Added more UI elements and cleaned up website
 - Added red typing indicator for wrong character entered during exercise
 ### Bowen
+- Added endpoints in the server for frontend
+- Modified Python scripts for server
+- Added new pieces to repo
+- Updated database
 ### Chris
 - I integrated Bowen's random piece reward system with the front-end
 - I added some minor UI changes
@@ -34,6 +38,7 @@
 ### Margaret
 - Do reflection
 ### Bowen
+- Work on Reflection assignment
 ### Chris
 - Work on Reflection assignment
 ### Eric
