@@ -21,6 +21,8 @@
 - Help frontend team with wrapping up puzzle functions
 ## 2. What We Did  
 ### Margaret
+- Added more UI elements and cleaned up website
+- Added red typing indicator for wrong character entered during exercise
 ### Bowen
 ### Chris
 - I integrated Bowen's random piece reward system with the front-end
@@ -30,6 +32,7 @@
 - Helped fix the 404 refresh error on the frontend pages
 ## 3. Plans / Goals  
 ### Margaret
+- Do reflection
 ### Bowen
 ### Chris
 - Work on Reflection assignment
