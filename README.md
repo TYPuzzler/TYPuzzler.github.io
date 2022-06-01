@@ -21,7 +21,7 @@ See the [user manual](https://github.com/TYPuzzler/TYPuzzler.github.io/wiki/User
 
 * Provide three puzzles for the user to solve, of increasing challenge in the length of the typing exercises and the number of puzzle pieces to complete a puzzle
 
-* Allow the user to come back to their progress on the puzzles, and to clear their data
+* Allow the user to come back to their progress on the puzzles, and to clear their progress
 
 ## Repository Layout
 ### \~/src/puzzle
