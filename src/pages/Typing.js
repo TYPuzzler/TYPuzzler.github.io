@@ -3,28 +3,34 @@ import useKeyPress from '../hooks/useKeypress';
 import { Link } from "react-router-dom";
 import { generate } from '../utils/words'
 import React, { useCallback, useState } from 'react';
-import { randomPiece } from '../utils/randomPiece';
+import { randomOrder, randomPiece, getPiece } from '../utils/randomPiece';
 
 /**
  * This represents the page that is presented to the user when they start a typing session.
  */
 function Typing() {
-  var level = parseInt(localStorage.getItem("level")) || 1;
-  var puzzleName;
-  if (level == 1) {
-    puzzleName = "JS_logo";
-  } else if (level == 2) {
-    puzzleName = "husky_logo";
-  } else {
-    puzzleName = "python_logo";
+  var level = parseInt(localStorage.getItem("level")) || 0;
+
+  const puzzles = {
+    1 : "JS_logo",
+    2 : "husky_logo",
+    3 : "python_logo"
   }
 
   const pieceCounts = {
     1 : 25,
     2 : 108,
     3 : 108
-}
+  }
 
+  var puzzleName;
+  if (level < 1) {
+    puzzleName = puzzles[1];
+  } else if (level > 3) {
+    puzzleName = puzzles[3];
+  } else {
+    puzzleName = puzzles[level];
+  }
 
   var earnedPieces = JSON.parse(localStorage.getItem(puzzleName)) ?? Array(109).fill(0);
 
@@ -57,10 +63,24 @@ function Typing() {
 
 
   const fetchData = useCallback(async () => {
+    if (level < 1) {
+      for (var i = 1; i <= 3; i++) {
+        let temp = await randomOrder(pieceCounts[i]);
+        localStorage.setItem(puzzles[i] + "_order", JSON.stringify(temp));
+      }
+      level = 1;
+      localStorage.setItem("level", 1);
+      localStorage.setItem("round", 0);
+    }
+
+    // Get the next piece to be rewarded
+    var order = JSON.parse(localStorage.getItem(puzzles[level] + "_order"));
+    var round = parseInt(localStorage.getItem("round"));
+    const p = await getPiece(puzzleName, order[round]);
+    setReward(p);
+
     // Get text sample from generator
     const text = await generate(50);
-    const rand = await randomPiece(puzzleName);
-    setReward(rand);
 
     // set state with the result
     setCurrentChar(text.charAt(0));
@@ -98,12 +118,19 @@ function Typing() {
           var duration = ((new Date().getTime()) - startTime) / 60000.0; // convert to minutes
           setWpm("WPM: " + ((correctChars.length / 5) / duration).toFixed(2)); 
           setAccuracy("ACC: " + ((correctChars.length * 100) / typed.length).toFixed(2) + "%")
-
-          if (earnedPieces[reward[0]] == 0) {
-          earnedPieces[0] = earnedPieces[0] + 1;
-          earnedPieces[reward[0]] = 1;
+          
+          var round = parseInt(localStorage.getItem("round"));
+          var order = JSON.parse(localStorage.getItem(puzzles[level] + "_order"));
+          // Add this puzzle piece to the ones previously earned
+          if (earnedPieces[order[round]] == 0) {
+            earnedPieces[0] = earnedPieces[0] + 1;
+            earnedPieces[order[round]] = 1;
           }
+
+          round = round + 1;
+
           localStorage.setItem("level", JSON.stringify(level));
+          localStorage.setItem("round", JSON.stringify(round))
           localStorage.setItem("last_earned", JSON.stringify(reward));
           localStorage.setItem(puzzleName, JSON.stringify(earnedPieces));
           setNextButton([<button variant="outlined">

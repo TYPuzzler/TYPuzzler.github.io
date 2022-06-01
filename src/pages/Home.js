@@ -29,9 +29,11 @@ function clear() {
   var answer = window.confirm("Are you sure you want to clear your data? This will delete all your progress!");
   if (answer) {
     localStorage.removeItem("level");
+    localStorage.removeItem("round");
     localStorage.removeItem("last_earned");
     for (var i = 1; i <= 3; i++) {
       localStorage.removeItem(puzzles[i]);
+      localStorage.removeItem(puzzles[i] + "_order");
     }
   }
 }
