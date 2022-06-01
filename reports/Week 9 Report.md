@@ -20,6 +20,7 @@
 ### Bowen
 ### Chris
 ### Eric
+- Helped fix the 404 refresh error on the frontend pages
 ## 3. Plans / Goals  
 ### Margaret
 ### Bowen
