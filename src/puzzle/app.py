@@ -41,14 +41,27 @@ def meta(nameOfPuzzle):
 
 # http://typuzzler.pythonanywhere.com/piece/"nameOfPuzzle"/"num"
 # Returns a JSON string of the metadata of the specified piece.
-#   ["url", x, y]
+#   [num, "url", rarity, x, y]
+# @app.route('/piece/<string:nameOfPuzzle>/<string:num>', methods=['GET'])
+# def piece(nameOfPuzzle, num):
+#     cnx = mysql.connector.connect(**config)
+#     cursor = cnx.cursor()
+#     name = json.loads(nameOfPuzzle)
+#     n = str(json.loads(num))
+#     query = 'SELECT piece_num, url, rarity, x, y FROM ' + name + ' where piece_num = ' + n
+#     cursor.execute(query)
+#     result = cursor.fetchall()
+#     cursor.close()
+#     cnx.close()
+#     return jsonify(result[0])
+
 @app.route('/piece/<string:nameOfPuzzle>/<string:num>', methods=['GET'])
 def piece(nameOfPuzzle, num):
     cnx = mysql.connector.connect(**config)
     cursor = cnx.cursor()
     name = json.loads(nameOfPuzzle)
     n = str(json.loads(num))
-    query = 'SELECT url, x, y FROM ' + name + ' where piece_num = ' + n
+    query = 'SELECT piece_num, new_url, rarity, x, y FROM ' + name + ' where piece_num = ' + n
     cursor.execute(query)
     result = cursor.fetchall()
     cursor.close()
@@ -171,3 +184,13 @@ def trans_piece(nameOfPuzzle):
     cursor.close()
     cnx.close()
     return jsonify(dic)
+
+# http://typuzzler.pythonanywhere.com/order/"num"/
+# Returns a JSON list of numbers from 1 to num in random order without duplicates.
+#   [n5, n13, n6, n1, ...]
+@app.route('/order/<string:num>', methods=['GET'])
+def order_list(num):
+    num = int(str(json.loads(num)))
+    lst = random.sample(range(num), num)
+    lst = [i+1 for i in lst]
+    return jsonify(lst)

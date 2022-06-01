@@ -89,6 +89,21 @@ def add_new_to_piece(nameOfPuzzle):
 		img.paste(new, (0,0), new)
 		img.save('../../images/' + nameOfPuzzle + '/new_piece_' + str(n) + '.png')
 
+def write_sql_updates_for_news(nameOfPuzzle):
+	meta = open('../../images/' + nameOfPuzzle + '/metadata.txt', 'r')
+	ml = meta.readlines()
+	meta.close()
+	f = open('sql.txt', 'w')
+	lines = []
+	for i in range(4, len(ml), 4):
+		num = ml[i].splitlines()[0]
+		rarity = str(ml[i + 2]).splitlines()[0]
+		x = str(ml[i + 1]).splitlines()[0].split(',')[0]
+		y = str(ml[i + 1]).splitlines()[0].split(',')[1]
+		line = 'update ' + nameOfPuzzle + ' set new_url = \'https://raw.githubusercontent.com/TYPuzzler/TYPuzzler.github.io/main/images/' + nameOfPuzzle + '/new_piece_' + num + '.png\' where piece_num = ' + num + ';'
+		lines.append(line)
+	f.writelines('\n'.join(lines))
+	f.close()
 
 
 
