@@ -1,4 +1,5 @@
 import urllib.request
+from PIL import Image 
 # This script contains all the utilily classes and functions
 
 # Base case exception.
@@ -76,6 +77,17 @@ def write_sql_updates_for_trans(nameOfPuzzle):
 	f.writelines('\n'.join(lines))
 	f.close()
 
+def add_new_to_piece(nameOfPuzzle):
+	meta = open('../../images/' + nameOfPuzzle + '/metadata.txt', 'r')
+	ml = meta.readlines()
+	meta.close()
+	num = int(ml[2].splitlines()[0])
+	for i in range(num):
+		n = i + 1
+		img = Image.open('../../images/' + nameOfPuzzle + '/' + nameOfPuzzle + '_piece_' + str(n) + '.png')
+		new = Image.open('../../images/new.png')
+		img.paste(new, (0,0), new)
+		img.save('../../images/' + nameOfPuzzle + '/new_piece_' + str(n) + '.png')
 
 
 
