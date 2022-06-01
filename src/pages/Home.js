@@ -18,7 +18,7 @@ function Home() {
         </button>
       </Link>
       <button onClick={() => clear()}>
-        Clear Data
+        Clear data
       </button>
     </div>
   );

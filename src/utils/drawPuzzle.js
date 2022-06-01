@@ -39,9 +39,9 @@ export const draw = async (level = 1, earnedPieces = Array(109).fill(0), last_ea
         height: gray[2],
         marginLeft: 'auto',
         marginRight: 'auto',
-        "border-style": 'outset',
+        "border-style": 'solid',
         "border-width": '5px',
-        "border-color": '#ad860e'
+        "border-color": '#000000'
     };
 
     // Add the pieces earned on top of the gray scale background
