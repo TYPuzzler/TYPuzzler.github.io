@@ -1,35 +1,37 @@
-
 import { useState, useEffect } from 'react';
 
-//1
+// This represents the key press hook for getting the character of the key the user presses
 const useKeyPress = callback => {
-  //2
+  // Create a state for the pressed key
   const [keyPressed, setKeyPressed] = useState();
-  //3
+
+  // Update the key pressed
   useEffect(() => {
-    //4
+    // When the key is pressed down, update the key pressed if it isn't the same key being held
+    // for longer, or a non-character key like shift
     const downHandler = ({ key }) => {
       if (keyPressed !== key && key.length === 1) {
         setKeyPressed(key);
         callback && callback(key);
       }
     };
-    //5
+
+    // When the key is up (released from the press), set the key pressed to null
     const upHandler = () => {
       setKeyPressed(null);
     };
 
-    //6
+    // Listen for the keydown and keyup events from the browser window for the handlers
     window.addEventListener('keydown', downHandler);
     window.addEventListener('keyup', upHandler);
 
+    // Clean up the handlers
     return () => {
-      //7
       window.removeEventListener('keydown', downHandler);
       window.removeEventListener('keyup', upHandler);
     };
   });
-  //8
+  
   return keyPressed;
 };
 
